@@ -1,0 +1,36 @@
+body {
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.avatar {
+    width: 150px;
+    --outline: 3px solid #fff1e6;
+    border: var(--outline);
+    outline: var(--outline);
+    outline-offset: -2px;
+    transition: outline-offset 200ms ease;
+}
+
+.avatar:hover,
+.avatar:focus {
+  outline: var(--outline);
+  outline-offset: 4px;
+}
+
+.card {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    line-height: 1.5;
+    background: #e2eafc;
+    color: #2b2839;
+    border-left: 6px solid #abc4ff;
+}
+
+
+
+
