@@ -1,0 +1,88 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    color: #000000;
+}
+
+header, section {
+    background-color: #ffffff;
+}
+
+/* typography */
+p {
+    font-size: 12px;
+    line-height: 15px;
+    margin: 1px;
+}
+
+.bold-txt {
+    font-weight: 700;
+}
+
+/* layout */
+.container {
+    width: 375px;
+    margin: 0 auto;
+}
+
+.head-cnt {
+    border-bottom: 1px solid #c6c6c6;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.profile-cnt {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.profile-info {
+    margin-left: 6px;
+}
+
+.icon-cnt {
+    height: 22px;
+    margin: 10px 0;
+}
+
+.post-info {
+    padding-left: 10px;
+}
+
+.post-info p {
+    margin-bottom: 12px;
+}
+
+/* image */
+.avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+}
+
+#logo {
+    width: 80px;
+    height: 33px;
+}
+
+.post-img {
+    width: 375px;
+    height: 375px;
+    margin-bottom: 10px;
+}
+
+.icon {
+    width: 22px;
+    height: 22px;
+    margin-left: 10px;
+    margin-right: 0px;
+}
+
+/* interaction */
+.icon:hover {
+    filter: invert(51%) sepia(79%) saturate(5986%) hue-rotate(330deg) brightness(99%) contrast(99%);
+}
