@@ -1,13 +1,20 @@
-# co72e499baf5f48346e5975cf
+# Restaurant ordering app
 
-## About Scrimba
+Features:
+- render menu items at loading
+- add menu items to shopping cart
+- remove menu items from shopping cart
+- present order summary to customer
+- trigger checkout modal after submitting order
+- display order confirmation based on customer name
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+Wrote html, css and JS from scratch.
 
-Happy Coding!
+Practiced:
+- css layout
+- JS arrays
+- .forEach()
+- eventListeners
+- data attributes
+- CDNs (add icon from font awesome)
