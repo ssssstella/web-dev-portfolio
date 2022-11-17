@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+/* typography */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #B7B7B7;
+    background: #f1eded;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 32px;
+    color: #F8F8F8;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+p {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+/* layout */
+.container {
+    width: 550px;
+    margin: 0 auto;
+    background: #FFFFFF;
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 18px;
+}
+
+.logo {
+    width: 84px;
+    height: 42px;
+}
+
+/* profile */
+main, 
+.listing-ctn { 
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    display: none;
+    left: 15px;
+    top: 50px;
+    width: 234px;
+    height: 116px;
+    transform: rotate(-30deg);
+}
+
+.profile-img {
+    display: block;
+    width: 98%;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.profile-info {
+    position: absolute;
+    left: 15px;
+    bottom: 0px;    
+}
+
+/* swipe */
+.swipe-ctn {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    width: 92px;
+    height: 92px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px #E9E9EA;
+    border: none;
+    border-radius: 50%;
+    margin: 24px 12px;
+}
+
+.icon {
+    width: 34px;
+    height: 34px;
+}
+
+#btn-nope:hover,
+#btn-nope:focus {
+    background: #FFE7EF;
+    box-shadow: 0px 10px 20px #EDD9DF;
+}
+
+#btn-like:hover,
+#btn-like:focus,
+#btn-like:active {
+    background: #DBFFF4;
+    box-shadow: 0px 10px 20px #CCF1E6;
+}
+
+/* ending */
+.ending-ctn {
+    position: relative;
+}
+
+.ending-ctn p {
+    position: absolute;
+    font-size: 36px;
+    left: 30px;
+    top: 200px;  
+}
