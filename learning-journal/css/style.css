@@ -1,0 +1,265 @@
+html, 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* typography */
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #505050;
+}
+
+h2, h3, p {
+    margin: 0;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.bold-text {
+    font-weight: 700;
+}
+
+.small-text {
+    font-size: 0.75rem;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+/* layout */
+.container {
+    width: 90%;
+    min-width: 250px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.post-img {
+    max-width: 100%;
+    border-radius: 3px;
+}
+
+/* header */
+header, .logo-ctn, .nav {
+    display: flex;
+}
+
+header {
+    justify-content: space-between;
+}
+
+    /* logo */
+.logo-ctn {
+    gap: 0.2em;
+    align-items: center;
+}
+
+.logo {
+    width: 24px;
+    height: 24px;
+}
+
+.logo-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: #0E0E0E;
+    text-decoration: none;
+}
+
+    /* nav */
+.nav {
+    gap: 2em;
+}
+
+li {
+    list-style-type: none;
+}
+
+li a {
+    color: #090909;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* post */
+.featured-post .container,
+.recent-post .container,
+.post-ctn {
+    display: flex;
+    flex-direction: column;
+}
+
+    /* featured-post */ 
+.featured-post {
+    background-image: url("../images/article-image-hero.jpg");
+    background-position: center;
+    background-size: cover;
+    color: #FFFFFF;
+}
+
+.featured-post .container {
+    padding: 5em 0 1.5em 0;
+}
+
+.featured-post .date {
+    order: -1;
+}
+
+.featured-post-title {
+    margin: 0.3em 0;
+}
+
+    /* recent-post */
+.recent-post {
+    margin-top: 2em;
+}
+
+.recent-post .container {
+    gap: 2.5em;
+}
+
+.recent-post .post-img {
+    order: -2;
+    padding-bottom: 1em;
+}
+
+.post-ctn .date {
+    order: -1;
+    padding-bottom: 0.5em;
+    font-size: 0.875rem;
+    color: #000000;
+}
+
+.post-title {
+    padding-bottom: 0.33em;
+    color: #141414;
+}
+
+.view-more {
+    display: block;
+    color: #000000;
+    text-align: center;
+    margin: 1.75em auto 2.5em auto;
+}
+
+/* footer */
+footer {
+    background: #202020;
+    text-align: center;
+    padding-top: 2.25em;
+    padding-bottom: 2.25em;
+}
+
+.footer-title {
+    color: #ECECEC;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.5em;
+}
+
+.copyright {
+    color: #D7D7D7;
+    line-height: 1.25;
+    margin: 0;
+}
+
+
+/* --- learning journal --- */
+.learning-journal, 
+.about-me {
+    color: #151515;
+}
+
+.learning-journal-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+}
+
+.learning-journal .date {
+    order: -1;
+    margin-bottom: 1.33em;
+}
+
+.learning-journal-title {
+    letter-spacing: -0.03em;
+    margin-bottom: 0.5em;
+}
+
+.learning-journal .post-img,
+.about-me-content {
+    margin-top: 2.25em;
+}
+
+/* --- about me --- */
+.about-me-profile {
+    padding-bottom: 1em;
+}
+
+.profile-img {
+    width: 182px;
+    height: 182px;
+    border-radius: 50%;
+    margin: 1.75em auto;
+}
+
+.about-me-title {
+    margin-bottom: 0.5em;
+}
+
+.about-me-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-bottom: 2.625em;
+}
+
+.recent-post-title {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 1.75em;
+}
+
+
+/* --- big screens --- */
+
+@media (min-width: 600px) {
+    .recent-post .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1em;
+    }
+
+    .learning-journal-content, 
+    .about-me-content {
+        padding: 0 4em;
+    }
+
+    .learning-journal-content {
+        margin-top: 4.5em;
+    }
+
+    .about-me-profile {
+        display: flex;
+        gap: 2em;
+        align-items: center;
+        padding-bottom: 2em;
+        margin-top: 4em;
+    } 
+}
