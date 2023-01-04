@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/* general */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #DCDCDC;
+}
+
+.App {
+    width: 320px;
+    background-color: #1A1B21;
+    margin: 0 auto;
+    border-radius: 0.625rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* typography */
+h4, h5, p {
+    margin: 0;
+}
+
+h4 {
+    font-weight: 700;
+    font-size: 1.5625rem;
+    line-height: 1.2;
+    color: #FFFFFF;
+}
+
+h5 {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #F5F5F5;
+}
+
+.small-text {
+    font-size: 0.64rem;
+    line-height: 1.5;
+}
+
+
+/* info */
+.info {
+    text-align: center;
+}
+
+.info--profile {
+    width: 100%;
+}
+
+.info--name {
+    margin-top: 1.25rem;
+}
+
+.info--occupation {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    margin-top: 0.375rem;
+    color: #F3BF99;
+}
+
+.info--website {
+    margin-top: 0.5625rem;
+    color: #F5F5F5;
+}
+
+.info--btn-ctn {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem auto 2rem;
+}
+
+.info--contact {
+    width: 16px;
+    height: 16px;
+}
+
+.info--btn {
+    width: 120px;
+    height: 34px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    border-radius: 6px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.email {
+    background: #FFFFFF;
+    border: 1px solid #D1D5DB;
+}
+
+.linkedin {
+    background: #5093E2;
+    border: none;
+}
+
+.email > a {
+    color: #374151;
+}
+
+.linkedin > a {
+    color: #FFFFFF;
+}
+
+.info--btn-ctn,
+.about,
+.interests {
+    width: 80%;
+}
+
+
+/* about & interests */
+.about,
+.interests {
+    margin: 0 auto 1.5rem;
+}
+
+.title {
+    margin-bottom: 0.3125rem;
+}
+
+.content {
+    text-align: left;
+}
+
+
+/* footer */
+footer{
+    padding: 1.25rem 4.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer--icon {
+    width: 25px;
+    height: 25px;
+    color: #918E9B;
+}
