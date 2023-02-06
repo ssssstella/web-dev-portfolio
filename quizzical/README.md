@@ -1,4 +1,4 @@
-#Quizzical App
+# Quizzical App
 A fun trivia quiz application built from scratch, all questions are from Open Trivia DB API.
 
 Practiced:
