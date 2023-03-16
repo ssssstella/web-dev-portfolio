@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stella Su's Portfolio</title>
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        
+        <!-- Update these with your own fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap" rel="stylesheet"> 
+        
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <p>/devstella/</p>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">My Projects</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <!-- Introduction -->
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Hi, I am <strong>Stella Su</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">Front-End Developer</p>
+            <img src="img/avatar.jpeg" alt="a picture of Stella's cat" class="intro__img">
+        </section>
+        
+        
+        <!-- My Work -->
+        <section class="my-work" id="work">
+            <h2 class="section__title section__title--work">My projects</h2>
+            <p class="section__subtitle section__subtitle--work">A selection of my range of work</p>
+            
+            <div class="portfolio">
+                <!-- Portfolio item 01 -->
+                <a href="project-quiz-app.html" class="portfolio__item">
+                    <img src="img/quiz.png" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 02 -->
+                <a href="project-movie-wl.html" class="portfolio__item">
+                    <img src="img/movie.jpg" alt="" class="portfolio__img">
+                </a>
+    
+                
+                <!-- Portfolio item 03 -->
+                <a href="project-pw-generator.html" class="portfolio__item">
+                    <img src="img/password.png" alt="" class="portfolio__img">
+                </a>
+        
+            </div>
+        </section>
+        
+        <!-- About me -->
+        <section class="about-me" id="about">
+           <h2 class="section__title section__title--about">Who I am</h2>
+           <p class="section__subtitle section__subtitle--about">Front-End Developer and cat lover from Vancouver</p>
+           
+           <div class="about-me__body">
+               <p>I'm a web developer based out of Vancouver, CA. I love building apps that solve real-world problems, and that are delightful to use. My specialities include TypeScript, React JS, and Styled Components.</p>
+           </div>
+           
+           <img src="img/cat.jpeg" alt="Cat staring towards the screen" class="about-me__img">
+        </section>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <a href="mailto:hello@stella.dev" class="footer__link">hello@stella.dev</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://codepen.io">
+                        <i class="fab fa-codepen"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://twitter.com">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        
+        
+        <script src="js/index.js"></script>
+        
+    </body>
+</html>

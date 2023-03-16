@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DevStella Portfolio Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" 
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        
+        <!-- Update these with your own fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap" rel="stylesheet"> 
+        
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <p>/devstella/</p>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="index.html#work" class="nav__link">My Work</a></li>
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">About me</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+
+        <section class="intro portfolio-intro">
+            <h1 class="section__title section__title--intro">
+                Password<strong>generator</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">Vanilla JS</p>
+            <img src="img/password.png" alt="" class="intro__img">
+
+        </section>
+        
+        
+        <div class="portfolio-item-individual">
+            <div >
+                <a class="" target="_blank" href="https://github.com/ssssstella/web-dev-portfolio/tree/main/password-generator"><i class="fab fa-github"></i> GitHub Repo</a>
+                <a class="" target="_blank" href="https://sage-salamander-2d014f.netlify.app/"><i class="fas fa-eye"></i> Live version   </a>
+            </div>
+            <p>An app that helps you generate two random passwords once at a time with the ability to set password length. Built in vanilla JS and HTML/CSS.</p>
+        </div>
+        
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <a href="mailto:hello@stella.dev" class="footer__link">hello@stella.dev</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://codepen.io">
+                        <i class="fab fa-codepen"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://twitter.com">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        
+        <script src="js/index.js"></script>
+        
+    </body>
+</html>
