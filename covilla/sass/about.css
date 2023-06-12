@@ -1,0 +1,3412 @@
+/* general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  width: calc((100% - 90px) * 0.9);
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #121212;
+}
+
+.logo span {
+  font-weight: bold;
+}
+
+button {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 5px;
+}
+
+.social-icon {
+  background-size: cover;
+  opacity: 0.2;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #dedede;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.horizontal-arrows {
+  display: flex;
+  gap: 1rem;
+}
+
+.horizontal-arrows div {
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #dedede;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.vacation-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.vacation-cards .vacation-card {
+  color: #121212;
+  padding: 25px;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  position: relative;
+  transition: 1s;
+}
+
+.vacation-cards .vacation-card h4 {
+  margin-bottom: 12px;
+}
+
+.vacation-cards .vacation-card i {
+  position: absolute;
+  font-size: 2rem;
+  right: 10%;
+  top: 35%;
+  transition: 1s;
+  opacity: 0;
+  color: white;
+}
+
+.vacation-cards .vacation-card:hover {
+  transform: scale(1.05);
+  background-image: url("../images/indonesia1.jpg");
+  background-color: #dedede;
+  background-blend-mode: multiply;
+  background-size: cover;
+  color: white;
+}
+
+.vacation-cards .vacation-card:hover i {
+  transform: translateX(15px);
+  opacity: 1;
+}
+
+.contact .menu-subtitle {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+}
+
+.contact .menu-subtitle::after {
+  background-color: #dedede;
+  width: 70%;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  position: relative;
+  left: 1em;
+}
+
+.contact .vacation-cards {
+  gap: 16px;
+}
+
+.contact .vacation-cards .vacation-card {
+  padding: 20px 15px;
+  background-color: #f8f8f8;
+}
+
+.contact .vacation-cards .vacation-card p {
+  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: lowercase;
+  transition: 1s;
+}
+
+.contact .vacation-cards .vacation-card i {
+  top: 25%;
+  color: #121212;
+}
+
+.contact .vacation-cards .vacation-card:hover {
+  transform: scale(1);
+  background-image: none;
+  background-blend-mode: multiply;
+  color: #121212;
+}
+
+.contact .vacation-cards .vacation-card:hover p {
+  transform: translateX(15px);
+}
+
+.support-contact {
+  background-size: cover;
+  background-color: #aeaeae;
+  background-blend-mode: multiply;
+  height: 800px;
+  padding-top: 200px;
+  position: relative;
+}
+
+.support-contact .container {
+  padding-top: 150px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.support-contact .container p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* typography */
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+/* page layout */
+/* sidebar */
+.sidebar {
+  width: 90px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-right: 1px solid rgba(222, 222, 222, 0.3);
+  z-index: 1;
+  /* sidebar-bottom */
+}
+
+.sidebar-top {
+  height: 80px;
+  background-color: white;
+  border-bottom: 1px solid rgba(222, 222, 222, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar-top i {
+  opacity: 0.7;
+}
+
+.sidebar-middle {
+  height: calc(100vh - 240px);
+}
+
+.sidebar-bottom {
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.side-menu {
+  width: 500px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -500px;
+  z-index: 2;
+  background-color: white;
+  transition: 2s;
+  overflow: hidden;
+}
+
+.side-menu p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.side-menu .menu-top {
+  height: 230px;
+  padding-bottom: 50px;
+}
+
+.side-menu .menu-top .menu-btn {
+  border: 1px solid rgba(222, 222, 222, 0.3);
+  height: 80px;
+  width: 90px;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.side-menu .menu-top h3 {
+  margin-left: 90px;
+}
+
+.side-menu .menu-box {
+  margin: 0 15px 0 70px;
+  padding: 0 25px 0 20px;
+  height: calc(100% - 230px);
+  overflow-y: scroll;
+}
+
+.side-menu .menu-box .continent,
+.side-menu .menu-box .country,
+.side-menu .menu-box .contact,
+.side-menu .menu-box .sns {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.side-menu .menu-box .menu-subtitle {
+  margin-bottom: 20px;
+  overflow: hidden;
+  font-size: 0.8rem;
+}
+
+.side-menu .menu-box .continent .menu-subtitle::after {
+  background-color: #dedede;
+  width: 45%;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  position: relative;
+  left: 1em;
+}
+
+.side-menu .menu-box .continent .vacation-card:nth-child(1):hover {
+  background-image: url("../images/egypt2.jpg");
+}
+
+.side-menu .menu-box .continent .vacation-card:nth-child(2):hover {
+  background-image: url("../images/indonesia2.jpg");
+}
+
+.side-menu .menu-box .continent .vacation-card:nth-child(3):hover {
+  background-image: url("../images/france2.jpg");
+}
+
+.side-menu .menu-box .country .menu-subtitle::after {
+  background-color: #dedede;
+  width: 42%;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  position: relative;
+  left: 1em;
+}
+
+.side-menu .menu-box .country .vacation-card:nth-child(1):hover {
+  background-image: url("../images/france1.jpg");
+}
+
+.side-menu .menu-box .country .vacation-card:nth-child(2):hover {
+  background-image: url("../images/indonesia1.jpg");
+}
+
+.side-menu .menu-box .country .vacation-card:nth-child(3):hover {
+  background-image: url("../images/greece1.jpg");
+}
+
+.side-menu .menu-box .country .vacation-card:nth-child(4):hover {
+  background-image: url("../images/egypt1.jpg");
+}
+
+.side-menu .menu-box .sns {
+  height: 50px;
+  margin-bottom: 30px;
+}
+
+.side-menu .menu-box .sns p {
+  display: inline;
+  margin-right: 20px;
+  line-height: 50px;
+}
+
+.side-menu .menu-box .sns .social-icon {
+  opacity: 0.6;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* header */
+header .logo,
+header .btn-des {
+  color: white;
+  position: fixed;
+  z-index: 2;
+}
+
+header .logo {
+  left: 130px;
+  line-height: 80px;
+}
+
+header .btn-des {
+  right: 100px;
+  top: 16px;
+  background-color: transparent;
+  border: 1px solid #dedede;
+  padding: 15px 20px;
+}
+
+header .btn-des .ph-caret-up {
+  display: none;
+}
+
+header .overlay {
+  width: calc(100% - 90px);
+  height: 0;
+  position: fixed;
+  top: 0;
+  left: 90px;
+  background-color: white;
+  border-bottom: 1px solid rgba(222, 222, 222, 0.3);
+  z-index: 1;
+}
+
+header .overlay nav {
+  margin-left: calc((100% - 430px) / 2);
+}
+
+header .overlay nav a {
+  margin-right: 40px;
+  line-height: 80px;
+  color: #121212;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header .dropdown-box {
+  position: fixed;
+  top: 92px;
+  right: 120px;
+  border-radius: 20px;
+  background-color: white;
+  padding: 25px;
+  z-index: 1;
+  display: none;
+}
+
+header .dropdown-box p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header .dropdown-box .dropdown-title {
+  overflow: hidden;
+  margin-bottom: 20px;
+  font-size: 0.8rem;
+}
+
+header .dropdown-box .dropdown-title::after {
+  background-color: #dedede;
+  width: 65%;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  position: relative;
+  left: 1em;
+}
+
+header .dropdown-box .vacation-cards {
+  display: grid;
+  grid-template: 110px 110px / 250px 250px;
+  gap: 15px;
+}
+
+header .dropdown-box .vacation-cards .vacation-card {
+  padding: 25px;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  position: relative;
+  transition: 1s;
+}
+
+header .dropdown-box .vacation-cards .vacation-card h4 {
+  margin-bottom: 12px;
+}
+
+header .dropdown-box .vacation-cards .vacation-card i {
+  position: absolute;
+  font-size: 2rem;
+  right: 10%;
+  top: 35%;
+  transition: 1s;
+  opacity: 0;
+  color: white;
+}
+
+header .dropdown-box .vacation-cards .vacation-card:hover {
+  transform: scale(1.05);
+  background-image: url("../images/indonesia1.jpg");
+  background-color: #dedede;
+  background-blend-mode: multiply;
+  background-size: cover;
+  color: white;
+}
+
+header .dropdown-box .vacation-cards .vacation-card:hover i {
+  transform: translateX(10px);
+  opacity: 1;
+}
+
+header .dropdown-box .vacation-cards .vacation-card:nth-child(1):hover {
+  background-image: url("../images/france1.jpg");
+}
+
+header .dropdown-box .vacation-cards .vacation-card:nth-child(2):hover {
+  background-image: url("../images/indonesia1.jpg");
+}
+
+header .dropdown-box .vacation-cards .vacation-card:nth-child(3):hover {
+  background-image: url("../images/greece1.jpg");
+}
+
+header .dropdown-box .vacation-cards .vacation-card:nth-child(4):hover {
+  background-image: url("../images/egypt1.jpg");
+}
+
+/* promotion */
+.promotion {
+  background-image: url("../images/greece1.jpg");
+  background-size: cover;
+  background-color: #aeaeae;
+  background-blend-mode: multiply;
+  height: 100vh;
+  padding-top: 200px;
+  position: relative;
+}
+
+.promotion .container {
+  padding-left: 90px;
+  padding-top: 50px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.promotion .container .promotion-message p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.promotion .container .promotion-message h1 {
+  width: 500px;
+  margin: 20px 0 30px 0;
+}
+
+.promotion .container .promotion-message button {
+  border: none;
+  background-color: white;
+  padding: 20px 30px;
+}
+
+.promotion .container .promotion-sneak {
+  padding: 40px;
+  border: 1px solid #dedede;
+  outline: 1px dashed #dedede;
+  outline-offset: 30px;
+  border-radius: 50%;
+  margin-right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promotion-location {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.promotion-location p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.promotion-location .promotion-floating {
+  width: 400px;
+  position: absolute;
+  left: 70px;
+  top: -30px;
+  color: white;
+}
+
+.promotion-location .promotion-floating p {
+  font-size: 0.8rem;
+  overflow: hidden;
+}
+
+.promotion-location .promotion-floating p::after {
+  background-color: white;
+  width: 55%;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  position: relative;
+  left: 1em;
+}
+
+.promotion-location .promotion-card {
+  display: flex;
+}
+
+.promotion-location .promotion-card .promotion-arrows,
+.promotion-location .promotion-card .promotion-chevron {
+  background-color: white;
+}
+
+.promotion-location .promotion-card .promotion-arrows {
+  width: 70px;
+  border-top-left-radius: 5px;
+}
+
+.promotion-location .promotion-card .promotion-arrows div {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.promotion-location .promotion-card .promotion-price {
+  background-color: #f8f8f8;
+  width: 400px;
+  padding: 40px;
+}
+
+.promotion-location .promotion-card .promotion-price h4 {
+  margin-bottom: 20px;
+}
+
+.promotion-location .promotion-card .promotion-chevron {
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promotion-location .promotion-card i {
+  cursor: pointer;
+}
+
+/* destination */
+.destination {
+  background-color: white;
+  margin-left: 90px;
+  padding: 150px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.destination p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.destination h2 {
+  margin-bottom: 50px;
+}
+
+.destination-photos {
+  height: 700px;
+  width: 100%;
+  position: relative;
+}
+
+.destination-photos .destination-photo-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.destination-photos .destination-photo-card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.destination-photos .destination-photo-card .destination-text {
+  color: white;
+  position: absolute;
+  text-align: center;
+  bottom: 100px;
+}
+
+.destination-photos .destination-photo-card:not(:first-child) {
+  opacity: 0;
+}
+
+.destination .horizontal-arrows {
+  position: absolute;
+  bottom: 125px;
+}
+
+/* benefit */
+.benefit {
+  background-color: #f8f8f8;
+  margin-left: 90px;
+  padding: 150px 0;
+}
+
+.benefit .container .benefit-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.benefit .container .benefit-summary div {
+  width: 40%;
+}
+
+.benefit .container .benefit-summary div p:nth-child(1) {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.benefit .container .benefit-summary div h2 {
+  margin-bottom: 30px;
+}
+
+.benefit .container .benefit-summary div h2 + p {
+  line-height: 1.5;
+  font-size: 1.5rem;
+  color: #5f5f5f;
+}
+
+.benefit .container .benefit-summary div button {
+  border: none;
+  color: white;
+  background-color: rgba(30, 107, 241, 0.896);
+  padding: 20px 30px;
+  margin-top: 30px;
+}
+
+.benefit .container .benefit-summary img {
+  width: 50%;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.benefit .container .benefit-summary + p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.benefit .container .benefit-summary + p::after {
+  background-color: #dedede;
+  width: calc(100% - 200px);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  position: relative;
+  left: 1em;
+}
+
+.benefit .container .benefit-items {
+  display: flex;
+}
+
+.benefit .container .benefit-items .benefit-card {
+  background-color: white;
+  width: 25%;
+  border-right: 1px solid #dedede;
+  padding: 40px 60px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.benefit .container .benefit-items .benefit-card .benefit-icon {
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #dedede;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.benefit .container .benefit-items .benefit-card .benefit-desc p {
+  margin-top: 20px;
+  color: #5f5f5f;
+}
+
+.benefit .container .benefit-items .benefit-card:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.benefit .container .benefit-items .benefit-card:last-child {
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* testimonial */
+.testimonial {
+  height: 800px;
+  background-image: url("../images/thomas-lefebvre-V63oM8OPJSo-unsplash.jpg");
+  background-color: #888888;
+  background-blend-mode: multiply;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  position: relative;
+}
+
+.testimonial-msg-box {
+  position: relative;
+  height: 200px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial-msg-box .testimonial-msg {
+  position: absolute;
+  top: 0;
+}
+
+.testimonial-msg-box .testimonial-msg p,
+.testimonial-msg-box .testimonial-msg h4 {
+  color: white;
+  width: 600px;
+  text-align: center;
+}
+
+.testimonial-msg-box .testimonial-msg p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+}
+
+.testimonial-msg-box .testimonial-msg:not(:first-child) {
+  opacity: 0;
+}
+
+.testimonial-msg-box .fadeIn {
+  animation: fadeIn 2s linear forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.testimonial-indicator {
+  position: absolute;
+  color: white;
+  left: 90px;
+}
+
+.testimonial-indicator-dot {
+  height: 50px;
+  width: 50px;
+  margin-bottom: 20px;
+  border-left: 4px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+}
+
+.testimonial-indicator-dot:not(:first-child) {
+  border-left: none;
+}
+
+/* popular */
+.popular {
+  position: relative;
+  top: -100px;
+}
+
+.popular .container .popular-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  color: white;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.popular .container .popular-title::after {
+  background-color: #dedede;
+  width: calc(100% - 260px);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  position: relative;
+  left: 1em;
+}
+
+.popular .container .popular-locations {
+  background-color: white;
+  padding: 50px 35px;
+  border-radius: 5px;
+}
+
+.popular .container .popular-locations .location-names {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.popular .container .popular-locations .location-names .location-name-card {
+  position: relative;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  border-bottom: 3px solid #dedede;
+  transition: 2s;
+}
+
+.popular .container .popular-locations .location-names .location-name-card div {
+  cursor: pointer;
+}
+
+.popular .container .popular-locations .location-names .location-name-card .dot {
+  position: absolute;
+  bottom: -7px;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: #dedede;
+  border: 1px solid transparent;
+  width: 13px;
+  height: 13px;
+}
+
+.popular .container .popular-locations .location-names .location-name-card .dot-outline {
+  position: absolute;
+  bottom: -20px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #121212;
+  width: 40px;
+  height: 40px;
+  border: 3px solid #121212;
+  display: none;
+}
+
+.popular .container .popular-locations .location-names .location-name-card:first-child {
+  border-bottom: 3px solid #121212;
+}
+
+.popular .container .popular-locations .location-names .location-name-card:first-child .dot {
+  background-color: #121212;
+}
+
+.popular .container .popular-locations .location-names .location-name-card:first-child .dot-outline {
+  display: block;
+}
+
+.popular .container .popular-locations .location-names .scaleIn {
+  animation: scaleIn 1s linear forwards;
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.popular .container .popular-locations .location-cards {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.popular .container .popular-locations .location-cards .location-card {
+  width: 31%;
+  height: 500px;
+  border: 1px solid #dedede;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: 1s;
+}
+
+.popular .container .popular-locations .location-cards .location-card-img {
+  border-radius: 20px;
+  margin-bottom: 30px;
+  height: 55%;
+  overflow: hidden;
+}
+
+.popular .container .popular-locations .location-cards .location-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1s;
+}
+
+.popular .container .popular-locations .location-cards .location-card h4,
+.popular .container .popular-locations .location-cards .location-card p {
+  margin-left: 10px;
+}
+
+.popular .container .popular-locations .location-cards .location-card h4 {
+  margin-bottom: 16px;
+}
+
+.popular .container .popular-locations .location-cards .location-card p {
+  margin-bottom: 20px;
+}
+
+.popular .container .popular-locations .location-cards .location-card .location-price {
+  border-top: 1px solid #dedede;
+  padding: 20px 16px 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.popular .container .popular-locations .location-cards .location-card .location-price div p:first-child {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.popular .container .popular-locations .location-cards .location-card .location-price div p:last-child {
+  margin-bottom: 0;
+}
+
+.popular .container .popular-locations .location-cards .location-card .location-price button {
+  background-color: transparent;
+  border: 1px solid #dedede;
+  padding: 0 20px;
+}
+
+.popular .container .popular-locations .location-cards .location-card:hover {
+  border: none;
+  transform: scale(1.02);
+  box-shadow: 0 9px 48px -6px rgba(53, 64, 117, 0.12);
+}
+
+.popular .container .popular-locations .location-cards .location-card:hover img {
+  transform: scale(1.09);
+}
+
+.popular .container .popular-locations .location-cards:not(:first-child) {
+  display: none;
+}
+
+/* promise */
+.promise {
+  margin-left: 90px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/steven-kamenar-MMJx78V7xS8-unsplash.jpg");
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 700px;
+  padding: 150px 0;
+}
+
+.promise-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.promise h2 {
+  width: 900px;
+  margin-bottom: 50px;
+}
+
+.promise div {
+  display: flex;
+  gap: 20px;
+}
+
+.promise div button {
+  width: 220px;
+  padding: 25px 40px;
+}
+
+.promise div button:last-child {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #dedede;
+}
+
+/* instruction */
+.instruction {
+  margin-left: 90px;
+  padding: 150px 0;
+}
+
+.instruction .container {
+  display: flex;
+  justify-content: space-between;
+  height: 700px;
+}
+
+.instruction .container .instruction-left {
+  width: 37%;
+  height: 100%;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #dedede;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.instruction .container .instruction-left img {
+  width: 100%;
+  height: 40%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.instruction .container .instruction-left p,
+.instruction .container .instruction-left h3,
+.instruction .container .instruction-left button {
+  margin-left: 20px;
+}
+
+.instruction .container .instruction-left p:first-of-type {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.instruction .container .instruction-left p:last-of-type {
+  line-height: 1.5;
+  font-size: 1.2rem;
+  color: #5f5f5f;
+}
+
+.instruction .container .instruction-left button {
+  width: 65%;
+  border: none;
+  color: white;
+  background-color: rgba(30, 107, 241, 0.896);
+  padding: 20px 30px;
+  margin-bottom: 20px;
+}
+
+.instruction .container .instruction-right {
+  width: 55%;
+  height: 100%;
+}
+
+.instruction .container .instruction-right .instruction-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  overflow: hidden;
+  margin-bottom: 30px;
+  margin-left: 10%;
+}
+
+.instruction .container .instruction-right .instruction-title::after {
+  background-color: #dedede;
+  width: calc(100% - 140px);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  position: relative;
+  left: 1em;
+}
+
+.instruction .container .instruction-right .instruction-cards {
+  height: 650px;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.instruction .container .instruction-right .instruction-cards .instruction-line {
+  width: 10px;
+  height: 1580px;
+  background-color: #ebebeb;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+}
+
+.instruction .container .instruction-right .instruction-cards .instruction-card {
+  width: 90%;
+  margin-left: 10%;
+  height: 350px;
+  border: 1px solid #dedede;
+  margin-bottom: 60px;
+  padding: 50px 40px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.instruction .container .instruction-right .instruction-cards .instruction-card i {
+  display: block;
+  font-size: 4rem;
+  color: #ababab;
+  margin-bottom: 20px;
+}
+
+.instruction .container .instruction-right .instruction-cards .instruction-card p {
+  line-height: 1.5;
+  font-size: 1.2rem;
+  color: #5f5f5f;
+}
+
+.instruction .container .instruction-right .instruction-cards .instruction-card:last-child {
+  margin-bottom: 0;
+}
+
+.instruction .container .instruction-right .instruction-cards::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* about */
+.about {
+  margin-left: 90px;
+  background-color: #f8f8f8;
+}
+
+.about .container {
+  padding: 150px 30px;
+}
+
+.about .container .about-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.about .container .about-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about .container .about-content h3 {
+  width: 45%;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.about .container .about-content div {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about .container .about-content div p {
+  line-height: 1.5;
+  font-size: 1.2rem;
+  color: #5f5f5f;
+}
+
+/* carousel */
+.carousel {
+  margin-left: 90px;
+}
+
+.carousel .swiper {
+  width: 100%;
+}
+
+.carousel .swiper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 400px;
+  height: 400px;
+}
+
+.carousel .swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* agent */
+.agent {
+  margin-left: 90px;
+  background-color: #f8f8f8;
+}
+
+.agent .container {
+  padding: 100px 30px 200px 30px;
+}
+
+.agent .container .agent-title {
+  margin-bottom: 40px;
+}
+
+.agent .container .agent-title p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  overflow: hidden;
+  display: inline;
+  margin-right: 2em;
+}
+
+.agent .container .agent-title p::after {
+  background-color: #dedede;
+  width: calc(100% - 385px);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  position: relative;
+  left: 1em;
+}
+
+.agent .container .agent-title button {
+  font-size: 0.8rem;
+  background-color: transparent;
+  padding: 10px 15px;
+  border: 1px solid #dedede;
+}
+
+.agent .container .agent-cards {
+  display: flex;
+  border: 1px solid #dedede;
+  border-radius: 20px;
+}
+
+.agent .container .agent-cards .agent-card {
+  width: 25%;
+  height: 500px;
+  padding: 20px 20px 40px 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 1s;
+}
+
+.agent .container .agent-cards .agent-card .agent-img {
+  border-radius: 20px;
+  height: 80%;
+  overflow: hidden;
+}
+
+.agent .container .agent-cards .agent-card .agent-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1s;
+}
+
+.agent .container .agent-cards .agent-card h4,
+.agent .container .agent-cards .agent-card p {
+  margin-left: 20px;
+}
+
+.agent .container .agent-cards .agent-card p {
+  color: #5f5f5f;
+}
+
+.agent .container .agent-cards .agent-card:first-child {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.agent .container .agent-cards .agent-card:last-child {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.agent .container .agent-cards .agent-card:hover {
+  border-radius: 20px;
+  transform: scale(1.02);
+  box-shadow: 0 9px 48px -6px rgba(53, 64, 117, 0.12);
+}
+
+.agent .container .agent-cards .agent-card:hover img {
+  transform: scale(1.09);
+}
+
+/* post */
+.post {
+  margin-left: 90px;
+}
+
+.post .container {
+  height: 900px;
+  position: relative;
+  top: -50px;
+  padding: 50px 50px 150px 50px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post .container .post-date {
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.7rem;
+  padding: 6px 12px;
+}
+
+.post .container .post-left {
+  position: relative;
+  width: 53%;
+}
+
+.post .container .post-left .post-left-img {
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.post .container .post-left .post-left-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1s;
+}
+
+.post .container .post-left .post-floating {
+  position: absolute;
+  left: 6%;
+  bottom: -8%;
+  width: 88%;
+  height: 45%;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 9px 48px -6px rgba(53, 64, 117, 0.12);
+  padding: 50px 40px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.post .container .post-left .post-floating p:last-of-type {
+  line-height: 1.5;
+  color: #5f5f5f;
+}
+
+.post .container .post-left .post-floating button {
+  width: 30%;
+  min-width: 150px;
+  border: 1px solid #dedede;
+  background-color: transparent;
+  padding: 15px 20px;
+}
+
+.post .container .post-left .post-floating .post-date {
+  position: absolute;
+  left: 40px;
+  top: -10px;
+}
+
+.post .container .post-left-img:hover img {
+  transform: scale(1.09);
+}
+
+.post .container .post-right {
+  width: 40%;
+}
+
+.post .container .post-right .post-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.post .container .post-right .post-title::after {
+  background-color: #dedede;
+  width: calc(100% - 140px);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  position: relative;
+  left: 1em;
+}
+
+.post .container .post-right .post-cards {
+  height: 100%;
+}
+
+.post .container .post-right .post-cards .post-card {
+  height: 22%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 8px 16px 8px 8px;
+  margin-bottom: 2%;
+  transition: 1s;
+}
+
+.post .container .post-right .post-cards .post-card .post-card-img {
+  width: 30%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.post .container .post-right .post-cards .post-card .post-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1s;
+}
+
+.post .container .post-right .post-cards .post-card .post-card-content {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+}
+
+.post .container .post-right .post-cards .post-card:last-child {
+  margin-bottom: 0;
+}
+
+.post .container .post-right .post-cards .post-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 9px 48px -6px rgba(53, 64, 117, 0.12);
+}
+
+.post .container .post-right .post-cards .post-card:hover img {
+  transform: scale(1.09);
+}
+
+/* footer */
+footer {
+  height: 160px;
+  border-top: 1px solid rgba(222, 222, 222, 0.3);
+  margin-left: 90px;
+}
+
+footer .ending-links {
+  display: flex;
+  justify-content: space-between;
+  margin: 70px 80px 30px 40px;
+}
+
+footer .ending-links .destinations a {
+  color: #121212;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 10px 15px;
+  margin-right: 20px;
+}
+
+footer .ending-links .destinations a:first-child {
+  background-color: #f8f8f8;
+  border-radius: 5px;
+}
+
+footer p {
+  text-align: right;
+  margin-right: 80px;
+}
+
+/* general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  width: calc((100% - 90px) * 0.9);
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #121212;
+}
+
+.logo span {
+  font-weight: bold;
+}
+
+button {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 5px;
+}
+
+.social-icon {
+  background-size: cover;
+  opacity: 0.2;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #dedede;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.horizontal-arrows {
+  display: flex;
+  gap: 1rem;
+}
+
+.horizontal-arrows div {
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #dedede;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.vacation-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.vacation-cards .vacation-card {
+  color: #121212;
+  padding: 25px;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  position: relative;
+  transition: 1s;
+}
+
+.vacation-cards .vacation-card h4 {
+  margin-bottom: 12px;
+}
+
+.vacation-cards .vacation-card i {
+  position: absolute;
+  font-size: 2rem;
+  right: 10%;
+  top: 35%;
+  transition: 1s;
+  opacity: 0;
+  color: white;
+}
+
+.vacation-cards .vacation-card:hover {
+  transform: scale(1.05);
+  background-image: url("../images/indonesia1.jpg");
+  background-color: #dedede;
+  background-blend-mode: multiply;
+  background-size: cover;
+  color: white;
+}
+
+.vacation-cards .vacation-card:hover i {
+  transform: translateX(15px);
+  opacity: 1;
+}
+
+.contact .menu-subtitle {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+}
+
+.contact .menu-subtitle::after {
+  background-color: #dedede;
+  width: 70%;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  position: relative;
+  left: 1em;
+}
+
+.contact .vacation-cards {
+  gap: 16px;
+}
+
+.contact .vacation-cards .vacation-card {
+  padding: 20px 15px;
+  background-color: #f8f8f8;
+}
+
+.contact .vacation-cards .vacation-card p {
+  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: lowercase;
+  transition: 1s;
+}
+
+.contact .vacation-cards .vacation-card i {
+  top: 25%;
+  color: #121212;
+}
+
+.contact .vacation-cards .vacation-card:hover {
+  transform: scale(1);
+  background-image: none;
+  background-blend-mode: multiply;
+  color: #121212;
+}
+
+.contact .vacation-cards .vacation-card:hover p {
+  transform: translateX(15px);
+}
+
+.support-contact {
+  background-size: cover;
+  background-color: #aeaeae;
+  background-blend-mode: multiply;
+  height: 800px;
+  padding-top: 200px;
+  position: relative;
+}
+
+.support-contact .container {
+  padding-top: 150px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.support-contact .container p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* typography */
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+/* page layout */
+/* sidebar */
+.sidebar {
+  width: 90px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-right: 1px solid rgba(222, 222, 222, 0.3);
+  z-index: 1;
+  /* sidebar-bottom */
+}
+
+.sidebar-top {
+  height: 80px;
+  background-color: white;
+  border-bottom: 1px solid rgba(222, 222, 222, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar-top i {
+  opacity: 0.7;
+}
+
+.sidebar-middle {
+  height: calc(100vh - 240px);
+}
+
+.sidebar-bottom {
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.side-menu {
+  width: 500px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -500px;
+  z-index: 2;
+  background-color: white;
+  transition: 2s;
+  overflow: hidden;
+}
+
+.side-menu p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.side-menu .menu-top {
+  height: 230px;
+  padding-bottom: 50px;
+}
+
+.side-menu .menu-top .menu-btn {
+  border: 1px solid rgba(222, 222, 222, 0.3);
+  height: 80px;
+  width: 90px;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.side-menu .menu-top h3 {
+  margin-left: 90px;
+}
+
+.side-menu .menu-box {
+  margin: 0 15px 0 70px;
+  padding: 0 25px 0 20px;
+  height: calc(100% - 230px);
+  overflow-y: scroll;
+}
+
+.side-menu .menu-box .continent,
+.side-menu .menu-box .country,
+.side-menu .menu-box .contact,
+.side-menu .menu-box .sns {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.side-menu .menu-box .menu-subtitle {
+  margin-bottom: 20px;
+  overflow: hidden;
+  font-size: 0.8rem;
+}
+
+.side-menu .menu-box .continent .menu-subtitle::after {
+  background-color: #dedede;
+  width: 45%;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  position: relative;
+  left: 1em;
+}
+
+.side-menu .menu-box .continent .vacation-card:nth-child(1):hover {
+  background-image: url("../images/egypt2.jpg");
+}
+
+.side-menu .menu-box .continent .vacation-card:nth-child(2):hover {
+  background-image: url("../images/indonesia2.jpg");
+}
+
+.side-menu .menu-box .continent .vacation-card:nth-child(3):hover {
+  background-image: url("../images/france2.jpg");
+}
+
+.side-menu .menu-box .country .menu-subtitle::after {
+  background-color: #dedede;
+  width: 42%;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  position: relative;
+  left: 1em;
+}
+
+.side-menu .menu-box .country .vacation-card:nth-child(1):hover {
+  background-image: url("../images/france1.jpg");
+}
+
+.side-menu .menu-box .country .vacation-card:nth-child(2):hover {
+  background-image: url("../images/indonesia1.jpg");
+}
+
+.side-menu .menu-box .country .vacation-card:nth-child(3):hover {
+  background-image: url("../images/greece1.jpg");
+}
+
+.side-menu .menu-box .country .vacation-card:nth-child(4):hover {
+  background-image: url("../images/egypt1.jpg");
+}
+
+.side-menu .menu-box .sns {
+  height: 50px;
+  margin-bottom: 30px;
+}
+
+.side-menu .menu-box .sns p {
+  display: inline;
+  margin-right: 20px;
+  line-height: 50px;
+}
+
+.side-menu .menu-box .sns .social-icon {
+  opacity: 0.6;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* header */
+header .logo,
+header .btn-des {
+  color: white;
+  position: fixed;
+  z-index: 2;
+}
+
+header .logo {
+  left: 130px;
+  line-height: 80px;
+}
+
+header .btn-des {
+  right: 100px;
+  top: 16px;
+  background-color: transparent;
+  border: 1px solid #dedede;
+  padding: 15px 20px;
+}
+
+header .btn-des .ph-caret-up {
+  display: none;
+}
+
+header .overlay {
+  width: calc(100% - 90px);
+  height: 0;
+  position: fixed;
+  top: 0;
+  left: 90px;
+  background-color: white;
+  border-bottom: 1px solid rgba(222, 222, 222, 0.3);
+  z-index: 1;
+}
+
+header .overlay nav {
+  margin-left: calc((100% - 430px) / 2);
+}
+
+header .overlay nav a {
+  margin-right: 40px;
+  line-height: 80px;
+  color: #121212;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header .dropdown-box {
+  position: fixed;
+  top: 92px;
+  right: 120px;
+  border-radius: 20px;
+  background-color: white;
+  padding: 25px;
+  z-index: 1;
+  display: none;
+}
+
+header .dropdown-box p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header .dropdown-box .dropdown-title {
+  overflow: hidden;
+  margin-bottom: 20px;
+  font-size: 0.8rem;
+}
+
+header .dropdown-box .dropdown-title::after {
+  background-color: #dedede;
+  width: 65%;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  position: relative;
+  left: 1em;
+}
+
+header .dropdown-box .vacation-cards {
+  display: grid;
+  grid-template: 110px 110px / 250px 250px;
+  gap: 15px;
+}
+
+header .dropdown-box .vacation-cards .vacation-card {
+  padding: 25px;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  position: relative;
+  transition: 1s;
+}
+
+header .dropdown-box .vacation-cards .vacation-card h4 {
+  margin-bottom: 12px;
+}
+
+header .dropdown-box .vacation-cards .vacation-card i {
+  position: absolute;
+  font-size: 2rem;
+  right: 10%;
+  top: 35%;
+  transition: 1s;
+  opacity: 0;
+  color: white;
+}
+
+header .dropdown-box .vacation-cards .vacation-card:hover {
+  transform: scale(1.05);
+  background-image: url("../images/indonesia1.jpg");
+  background-color: #dedede;
+  background-blend-mode: multiply;
+  background-size: cover;
+  color: white;
+}
+
+header .dropdown-box .vacation-cards .vacation-card:hover i {
+  transform: translateX(10px);
+  opacity: 1;
+}
+
+header .dropdown-box .vacation-cards .vacation-card:nth-child(1):hover {
+  background-image: url("../images/france1.jpg");
+}
+
+header .dropdown-box .vacation-cards .vacation-card:nth-child(2):hover {
+  background-image: url("../images/indonesia1.jpg");
+}
+
+header .dropdown-box .vacation-cards .vacation-card:nth-child(3):hover {
+  background-image: url("../images/greece1.jpg");
+}
+
+header .dropdown-box .vacation-cards .vacation-card:nth-child(4):hover {
+  background-image: url("../images/egypt1.jpg");
+}
+
+/* promotion */
+.promotion {
+  background-image: url("../images/greece1.jpg");
+  background-size: cover;
+  background-color: #aeaeae;
+  background-blend-mode: multiply;
+  height: 100vh;
+  padding-top: 200px;
+  position: relative;
+}
+
+.promotion .container {
+  padding-left: 90px;
+  padding-top: 50px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.promotion .container .promotion-message p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.promotion .container .promotion-message h1 {
+  width: 500px;
+  margin: 20px 0 30px 0;
+}
+
+.promotion .container .promotion-message button {
+  border: none;
+  background-color: white;
+  padding: 20px 30px;
+}
+
+.promotion .container .promotion-sneak {
+  padding: 40px;
+  border: 1px solid #dedede;
+  outline: 1px dashed #dedede;
+  outline-offset: 30px;
+  border-radius: 50%;
+  margin-right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promotion-location {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.promotion-location p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.promotion-location .promotion-floating {
+  width: 400px;
+  position: absolute;
+  left: 70px;
+  top: -30px;
+  color: white;
+}
+
+.promotion-location .promotion-floating p {
+  font-size: 0.8rem;
+  overflow: hidden;
+}
+
+.promotion-location .promotion-floating p::after {
+  background-color: white;
+  width: 55%;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  position: relative;
+  left: 1em;
+}
+
+.promotion-location .promotion-card {
+  display: flex;
+}
+
+.promotion-location .promotion-card .promotion-arrows,
+.promotion-location .promotion-card .promotion-chevron {
+  background-color: white;
+}
+
+.promotion-location .promotion-card .promotion-arrows {
+  width: 70px;
+  border-top-left-radius: 5px;
+}
+
+.promotion-location .promotion-card .promotion-arrows div {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.promotion-location .promotion-card .promotion-price {
+  background-color: #f8f8f8;
+  width: 400px;
+  padding: 40px;
+}
+
+.promotion-location .promotion-card .promotion-price h4 {
+  margin-bottom: 20px;
+}
+
+.promotion-location .promotion-card .promotion-chevron {
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promotion-location .promotion-card i {
+  cursor: pointer;
+}
+
+/* destination */
+.destination {
+  background-color: white;
+  margin-left: 90px;
+  padding: 150px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.destination p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.destination h2 {
+  margin-bottom: 50px;
+}
+
+.destination-photos {
+  height: 700px;
+  width: 100%;
+  position: relative;
+}
+
+.destination-photos .destination-photo-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.destination-photos .destination-photo-card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.destination-photos .destination-photo-card .destination-text {
+  color: white;
+  position: absolute;
+  text-align: center;
+  bottom: 100px;
+}
+
+.destination-photos .destination-photo-card:not(:first-child) {
+  opacity: 0;
+}
+
+.destination .horizontal-arrows {
+  position: absolute;
+  bottom: 125px;
+}
+
+/* benefit */
+.benefit {
+  background-color: #f8f8f8;
+  margin-left: 90px;
+  padding: 150px 0;
+}
+
+.benefit .container .benefit-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.benefit .container .benefit-summary div {
+  width: 40%;
+}
+
+.benefit .container .benefit-summary div p:nth-child(1) {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.benefit .container .benefit-summary div h2 {
+  margin-bottom: 30px;
+}
+
+.benefit .container .benefit-summary div h2 + p {
+  line-height: 1.5;
+  font-size: 1.5rem;
+  color: #5f5f5f;
+}
+
+.benefit .container .benefit-summary div button {
+  border: none;
+  color: white;
+  background-color: rgba(30, 107, 241, 0.896);
+  padding: 20px 30px;
+  margin-top: 30px;
+}
+
+.benefit .container .benefit-summary img {
+  width: 50%;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.benefit .container .benefit-summary + p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.benefit .container .benefit-summary + p::after {
+  background-color: #dedede;
+  width: calc(100% - 200px);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  position: relative;
+  left: 1em;
+}
+
+.benefit .container .benefit-items {
+  display: flex;
+}
+
+.benefit .container .benefit-items .benefit-card {
+  background-color: white;
+  width: 25%;
+  border-right: 1px solid #dedede;
+  padding: 40px 60px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.benefit .container .benefit-items .benefit-card .benefit-icon {
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #dedede;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.benefit .container .benefit-items .benefit-card .benefit-desc p {
+  margin-top: 20px;
+  color: #5f5f5f;
+}
+
+.benefit .container .benefit-items .benefit-card:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.benefit .container .benefit-items .benefit-card:last-child {
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* testimonial */
+.testimonial {
+  height: 800px;
+  background-image: url("../images/thomas-lefebvre-V63oM8OPJSo-unsplash.jpg");
+  background-color: #888888;
+  background-blend-mode: multiply;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  position: relative;
+}
+
+.testimonial-msg-box {
+  position: relative;
+  height: 200px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial-msg-box .testimonial-msg {
+  position: absolute;
+  top: 0;
+}
+
+.testimonial-msg-box .testimonial-msg p,
+.testimonial-msg-box .testimonial-msg h4 {
+  color: white;
+  width: 600px;
+  text-align: center;
+}
+
+.testimonial-msg-box .testimonial-msg p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+}
+
+.testimonial-msg-box .testimonial-msg:not(:first-child) {
+  opacity: 0;
+}
+
+.testimonial-msg-box .fadeIn {
+  animation: fadeIn 2s linear forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.testimonial-indicator {
+  position: absolute;
+  color: white;
+  left: 90px;
+}
+
+.testimonial-indicator-dot {
+  height: 50px;
+  width: 50px;
+  margin-bottom: 20px;
+  border-left: 4px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+}
+
+.testimonial-indicator-dot:not(:first-child) {
+  border-left: none;
+}
+
+/* popular */
+.popular {
+  position: relative;
+  top: -100px;
+}
+
+.popular .container .popular-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  color: white;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.popular .container .popular-title::after {
+  background-color: #dedede;
+  width: calc(100% - 260px);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  position: relative;
+  left: 1em;
+}
+
+.popular .container .popular-locations {
+  background-color: white;
+  padding: 50px 35px;
+  border-radius: 5px;
+}
+
+.popular .container .popular-locations .location-names {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.popular .container .popular-locations .location-names .location-name-card {
+  position: relative;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  border-bottom: 3px solid #dedede;
+  transition: 2s;
+}
+
+.popular .container .popular-locations .location-names .location-name-card div {
+  cursor: pointer;
+}
+
+.popular .container .popular-locations .location-names .location-name-card .dot {
+  position: absolute;
+  bottom: -7px;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: #dedede;
+  border: 1px solid transparent;
+  width: 13px;
+  height: 13px;
+}
+
+.popular .container .popular-locations .location-names .location-name-card .dot-outline {
+  position: absolute;
+  bottom: -20px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #121212;
+  width: 40px;
+  height: 40px;
+  border: 3px solid #121212;
+  display: none;
+}
+
+.popular .container .popular-locations .location-names .location-name-card:first-child {
+  border-bottom: 3px solid #121212;
+}
+
+.popular .container .popular-locations .location-names .location-name-card:first-child .dot {
+  background-color: #121212;
+}
+
+.popular .container .popular-locations .location-names .location-name-card:first-child .dot-outline {
+  display: block;
+}
+
+.popular .container .popular-locations .location-names .scaleIn {
+  animation: scaleIn 1s linear forwards;
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.popular .container .popular-locations .location-cards {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.popular .container .popular-locations .location-cards .location-card {
+  width: 31%;
+  height: 500px;
+  border: 1px solid #dedede;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: 1s;
+}
+
+.popular .container .popular-locations .location-cards .location-card-img {
+  border-radius: 20px;
+  margin-bottom: 30px;
+  height: 55%;
+  overflow: hidden;
+}
+
+.popular .container .popular-locations .location-cards .location-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1s;
+}
+
+.popular .container .popular-locations .location-cards .location-card h4,
+.popular .container .popular-locations .location-cards .location-card p {
+  margin-left: 10px;
+}
+
+.popular .container .popular-locations .location-cards .location-card h4 {
+  margin-bottom: 16px;
+}
+
+.popular .container .popular-locations .location-cards .location-card p {
+  margin-bottom: 20px;
+}
+
+.popular .container .popular-locations .location-cards .location-card .location-price {
+  border-top: 1px solid #dedede;
+  padding: 20px 16px 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.popular .container .popular-locations .location-cards .location-card .location-price div p:first-child {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.popular .container .popular-locations .location-cards .location-card .location-price div p:last-child {
+  margin-bottom: 0;
+}
+
+.popular .container .popular-locations .location-cards .location-card .location-price button {
+  background-color: transparent;
+  border: 1px solid #dedede;
+  padding: 0 20px;
+}
+
+.popular .container .popular-locations .location-cards .location-card:hover {
+  border: none;
+  transform: scale(1.02);
+  box-shadow: 0 9px 48px -6px rgba(53, 64, 117, 0.12);
+}
+
+.popular .container .popular-locations .location-cards .location-card:hover img {
+  transform: scale(1.09);
+}
+
+.popular .container .popular-locations .location-cards:not(:first-child) {
+  display: none;
+}
+
+/* promise */
+.promise {
+  margin-left: 90px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/steven-kamenar-MMJx78V7xS8-unsplash.jpg");
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 700px;
+  padding: 150px 0;
+}
+
+.promise-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.promise h2 {
+  width: 900px;
+  margin-bottom: 50px;
+}
+
+.promise div {
+  display: flex;
+  gap: 20px;
+}
+
+.promise div button {
+  width: 220px;
+  padding: 25px 40px;
+}
+
+.promise div button:last-child {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #dedede;
+}
+
+/* instruction */
+.instruction {
+  margin-left: 90px;
+  padding: 150px 0;
+}
+
+.instruction .container {
+  display: flex;
+  justify-content: space-between;
+  height: 700px;
+}
+
+.instruction .container .instruction-left {
+  width: 37%;
+  height: 100%;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #dedede;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.instruction .container .instruction-left img {
+  width: 100%;
+  height: 40%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.instruction .container .instruction-left p,
+.instruction .container .instruction-left h3,
+.instruction .container .instruction-left button {
+  margin-left: 20px;
+}
+
+.instruction .container .instruction-left p:first-of-type {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.instruction .container .instruction-left p:last-of-type {
+  line-height: 1.5;
+  font-size: 1.2rem;
+  color: #5f5f5f;
+}
+
+.instruction .container .instruction-left button {
+  width: 65%;
+  border: none;
+  color: white;
+  background-color: rgba(30, 107, 241, 0.896);
+  padding: 20px 30px;
+  margin-bottom: 20px;
+}
+
+.instruction .container .instruction-right {
+  width: 55%;
+  height: 100%;
+}
+
+.instruction .container .instruction-right .instruction-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  overflow: hidden;
+  margin-bottom: 30px;
+  margin-left: 10%;
+}
+
+.instruction .container .instruction-right .instruction-title::after {
+  background-color: #dedede;
+  width: calc(100% - 140px);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  position: relative;
+  left: 1em;
+}
+
+.instruction .container .instruction-right .instruction-cards {
+  height: 650px;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.instruction .container .instruction-right .instruction-cards .instruction-line {
+  width: 10px;
+  height: 1580px;
+  background-color: #ebebeb;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+}
+
+.instruction .container .instruction-right .instruction-cards .instruction-card {
+  width: 90%;
+  margin-left: 10%;
+  height: 350px;
+  border: 1px solid #dedede;
+  margin-bottom: 60px;
+  padding: 50px 40px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.instruction .container .instruction-right .instruction-cards .instruction-card i {
+  display: block;
+  font-size: 4rem;
+  color: #ababab;
+  margin-bottom: 20px;
+}
+
+.instruction .container .instruction-right .instruction-cards .instruction-card p {
+  line-height: 1.5;
+  font-size: 1.2rem;
+  color: #5f5f5f;
+}
+
+.instruction .container .instruction-right .instruction-cards .instruction-card:last-child {
+  margin-bottom: 0;
+}
+
+.instruction .container .instruction-right .instruction-cards::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* about */
+.about {
+  margin-left: 90px;
+  background-color: #f8f8f8;
+}
+
+.about .container {
+  padding: 150px 30px;
+}
+
+.about .container .about-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.about .container .about-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about .container .about-content h3 {
+  width: 45%;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.about .container .about-content div {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about .container .about-content div p {
+  line-height: 1.5;
+  font-size: 1.2rem;
+  color: #5f5f5f;
+}
+
+/* carousel */
+.carousel {
+  margin-left: 90px;
+}
+
+.carousel .swiper {
+  width: 100%;
+}
+
+.carousel .swiper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 400px;
+  height: 400px;
+}
+
+.carousel .swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* agent */
+.agent {
+  margin-left: 90px;
+  background-color: #f8f8f8;
+}
+
+.agent .container {
+  padding: 100px 30px 200px 30px;
+}
+
+.agent .container .agent-title {
+  margin-bottom: 40px;
+}
+
+.agent .container .agent-title p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  overflow: hidden;
+  display: inline;
+  margin-right: 2em;
+}
+
+.agent .container .agent-title p::after {
+  background-color: #dedede;
+  width: calc(100% - 385px);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  position: relative;
+  left: 1em;
+}
+
+.agent .container .agent-title button {
+  font-size: 0.8rem;
+  background-color: transparent;
+  padding: 10px 15px;
+  border: 1px solid #dedede;
+}
+
+.agent .container .agent-cards {
+  display: flex;
+  border: 1px solid #dedede;
+  border-radius: 20px;
+}
+
+.agent .container .agent-cards .agent-card {
+  width: 25%;
+  height: 500px;
+  padding: 20px 20px 40px 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 1s;
+}
+
+.agent .container .agent-cards .agent-card .agent-img {
+  border-radius: 20px;
+  height: 80%;
+  overflow: hidden;
+}
+
+.agent .container .agent-cards .agent-card .agent-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1s;
+}
+
+.agent .container .agent-cards .agent-card h4,
+.agent .container .agent-cards .agent-card p {
+  margin-left: 20px;
+}
+
+.agent .container .agent-cards .agent-card p {
+  color: #5f5f5f;
+}
+
+.agent .container .agent-cards .agent-card:first-child {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.agent .container .agent-cards .agent-card:last-child {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.agent .container .agent-cards .agent-card:hover {
+  border-radius: 20px;
+  transform: scale(1.02);
+  box-shadow: 0 9px 48px -6px rgba(53, 64, 117, 0.12);
+}
+
+.agent .container .agent-cards .agent-card:hover img {
+  transform: scale(1.09);
+}
+
+/* post */
+.post {
+  margin-left: 90px;
+}
+
+.post .container {
+  height: 900px;
+  position: relative;
+  top: -50px;
+  padding: 50px 50px 150px 50px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post .container .post-date {
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.7rem;
+  padding: 6px 12px;
+}
+
+.post .container .post-left {
+  position: relative;
+  width: 53%;
+}
+
+.post .container .post-left .post-left-img {
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.post .container .post-left .post-left-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1s;
+}
+
+.post .container .post-left .post-floating {
+  position: absolute;
+  left: 6%;
+  bottom: -8%;
+  width: 88%;
+  height: 45%;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 9px 48px -6px rgba(53, 64, 117, 0.12);
+  padding: 50px 40px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.post .container .post-left .post-floating p:last-of-type {
+  line-height: 1.5;
+  color: #5f5f5f;
+}
+
+.post .container .post-left .post-floating button {
+  width: 30%;
+  min-width: 150px;
+  border: 1px solid #dedede;
+  background-color: transparent;
+  padding: 15px 20px;
+}
+
+.post .container .post-left .post-floating .post-date {
+  position: absolute;
+  left: 40px;
+  top: -10px;
+}
+
+.post .container .post-left-img:hover img {
+  transform: scale(1.09);
+}
+
+.post .container .post-right {
+  width: 40%;
+}
+
+.post .container .post-right .post-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.post .container .post-right .post-title::after {
+  background-color: #dedede;
+  width: calc(100% - 140px);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  position: relative;
+  left: 1em;
+}
+
+.post .container .post-right .post-cards {
+  height: 100%;
+}
+
+.post .container .post-right .post-cards .post-card {
+  height: 22%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 8px 16px 8px 8px;
+  margin-bottom: 2%;
+  transition: 1s;
+}
+
+.post .container .post-right .post-cards .post-card .post-card-img {
+  width: 30%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.post .container .post-right .post-cards .post-card .post-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1s;
+}
+
+.post .container .post-right .post-cards .post-card .post-card-content {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+}
+
+.post .container .post-right .post-cards .post-card:last-child {
+  margin-bottom: 0;
+}
+
+.post .container .post-right .post-cards .post-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 9px 48px -6px rgba(53, 64, 117, 0.12);
+}
+
+.post .container .post-right .post-cards .post-card:hover img {
+  transform: scale(1.09);
+}
+
+/* footer */
+footer {
+  height: 160px;
+  border-top: 1px solid rgba(222, 222, 222, 0.3);
+  margin-left: 90px;
+}
+
+footer .ending-links {
+  display: flex;
+  justify-content: space-between;
+  margin: 70px 80px 30px 40px;
+}
+
+footer .ending-links .destinations a {
+  color: #121212;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 10px 15px;
+  margin-right: 20px;
+}
+
+footer .ending-links .destinations a:first-child {
+  background-color: #f8f8f8;
+  border-radius: 5px;
+}
+
+footer p {
+  text-align: right;
+  margin-right: 80px;
+}
+
+/* contact */
+.support-contact {
+  background-image: url("../images/france2.jpg");
+}
+
+/* form */
+.form {
+  position: relative;
+  top: -100px;
+  padding: 0 50px;
+}
+
+.form .container {
+  background-color: white;
+  padding: 50px;
+  border-radius: 5px;
+}
+
+.form .container .form-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.form .container .form-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form .container .form-box .form-left {
+  width: 65%;
+  padding: 60px;
+  background-color: #f8f8f8;
+  border: 1px solid #dedede;
+  border-radius: 20px;
+}
+
+.form .container .form-box .form-left form {
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form .container .form-box .form-left form label {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.form .container .form-box .form-left form input,
+.form .container .form-box .form-left form textarea {
+  border: none;
+  border-radius: 5px;
+  padding: 20px;
+  color: #5f5f5f;
+}
+
+.form .container .form-box .form-left form input[type="text"] {
+  margin-bottom: 25px;
+}
+
+.form .container .form-box .form-left form .name-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form .container .form-box .form-left form .name-input input {
+  width: 48%;
+}
+
+.form .container .form-box .form-left form textarea {
+  height: 200px;
+  margin-bottom: 50px;
+}
+
+.form .container .form-box .form-left form input[type="submit"] {
+  color: white;
+  background-color: rgba(30, 107, 241, 0.896);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.form .container .form-box .form-right {
+  width: 30%;
+  position: sticky;
+  align-self: flex-start;
+  top: 120px;
+}
+
+.form .container .form-box .form-right .menu-subtitle {
+  margin-bottom: 20px;
+}
+
+.form .container .form-box .form-right .menu-subtitle::after {
+  background-color: #dedede;
+  width: calc(100% - 120px);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  position: relative;
+  left: 1em;
+}
+
+.form .container .form-box .form-right .vacation-cards {
+  margin-bottom: 0;
+}
+
+.promise .container {
+  margin-top: -100px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.promise .container h2 {
+  width: 600px;
+}
+
+.promise .container p:last-child {
+  width: 700px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.agent .container {
+  padding: 0px 30px 70px 30px;
+  position: relative;
+  top: -70px;
+}
+
+/* contact */
+.support-contact {
+  background-image: url("../images/indonesia1.jpg");
+}
+
+.form .container .form-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form .container .form-box .form-msg {
+  width: 40%;
+}
+
+.form .container .form-box .form-msg h2 {
+  margin-bottom: 30px;
+}
+
+.form .container .form-box .form-msg p {
+  line-height: 1.5;
+  font-size: 1.2rem;
+  color: #5f5f5f;
+}
+
+.form .container .form-box .form-msg button {
+  border: none;
+  color: white;
+  background-color: rgba(30, 107, 241, 0.896);
+  padding: 20px 30px;
+  margin-top: 30px;
+}
+
+.form .container .form-box img {
+  width: 50%;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.mission {
+  margin-left: 90px;
+  background-color: #f8f8f8;
+}
+
+.mission .container {
+  padding: 150px 0;
+}
+
+.mission .container .mission-msg {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.mission .container .mission-msg p:first-child {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.mission .container .mission-msg h2 {
+  width: 750px;
+}
+
+.mission .container .mission-msg p:last-child {
+  width: 750px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #5f5f5f;
+}
+
+.mission .container .mission-grid {
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mission .container .mission-grid .grid-cell {
+  padding: 10px;
+  flex: 0 0 25%;
+  height: 320px;
+  align-self: flex-end;
+}
+
+.mission .container .mission-grid .grid-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.mission .container .mission-grid .short-cell {
+  height: 240px;
+}
+
+.mission .container .mission-grid .wide-cell {
+  flex: 0 0 50%;
+  margin-bottom: -40px;
+}
+
+.mission .container .mission-grid .tall-cell {
+  height: 360px;
+}
+
+.promise {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/greece1.jpg");
+}
+
+.promise .container h2 {
+  width: 700px;
+}

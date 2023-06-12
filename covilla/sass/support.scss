@@ -1,0 +1,129 @@
+@import 'index';
+
+/* contact */
+.support-contact {
+    background-image: url("../images/france2.jpg");
+}
+
+/* form */
+.form {
+    position: relative;
+    top: -100px;
+    padding: 0 50px;
+
+    .container {
+        background-color: $white;
+        padding: 50px;
+        @include border-radius;
+
+        .form-title {
+            @include capital-wide-font;
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        .form-box {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+
+            .form-left {
+                width: 65%;
+                padding: 60px;
+                background-color: lighten($lightgrey, 10%);
+                border: 1px solid $lightgrey;
+                @include border-radius(20px);
+
+                form {
+                    height: 700px;
+                    display: flex;
+                    flex-direction: column;
+                    // justify-content: space-between;
+
+                    label {
+                        font-weight: bold;
+                        margin-bottom: 16px;
+                    }
+
+                    input,
+                    textarea {
+                        border: none;
+                        @include border-radius;
+                        padding: 20px;
+                        color: $darkgrey;
+                    }
+
+                    input[type="text"] {
+                        margin-bottom: 25px;
+                    }
+
+                    .name-input {
+                        display: flex;
+                        justify-content: space-between;
+
+                        input {
+                            width: 48%;
+                        }
+                    }
+
+                    textarea {
+                        height: 200px;
+                        margin-bottom: 50px;
+                    }
+
+                    input[type="submit"] {
+                        color: $white;
+                        background-color: $blue;
+                        @include capital-wide-font;
+                    }
+                }
+            }
+
+            .form-right {
+                width: 30%;
+                position: sticky;
+                align-self: flex-start;
+                top: 120px;
+
+                .menu-subtitle {
+                    margin-bottom: 20px;
+                }
+
+                .menu-subtitle::after {
+                    @include separation-line($lightgrey, calc(100% - 120px), 1em);
+                }
+
+                .vacation-cards {
+                    margin-bottom: 0;
+                }
+
+            }
+        }
+    }
+}
+
+.promise {
+    .container {
+        margin-top: -100px;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            width: 600px;
+        }
+
+        p:last-child {
+            width: 700px;
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+    }
+}
+
+.agent {
+    .container {
+        padding: 0px 30px 70px 30px;
+        position: relative;
+        top: -70px;
+    }
+}

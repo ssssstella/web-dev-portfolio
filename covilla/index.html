@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sass/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="sidebar-top" id="menu-open">
+            <i class="fa-solid fa-bars fa-2xl"></i>
+        </div>
+
+        <div class="sidebar-middle">
+        </div>
+
+        <div class="sidebar-bottom">
+            <img class="social-icon" src="images/icons8-instagram-96.png" alt="instagram">
+            <img class="social-icon" src="images/icons8-facebook-96.png" alt="facebook">
+            <img class="social-icon" src="images/icons8-linkedin-96.png" alt="linkedin">
+        </div>
+
+    </div>
+
+    <div class="side-menu" id="menu">
+        <div class="menu-top">
+            <div class="menu-btn" id="menu-close">
+                <i class="fa-solid fa-xmark fa-2xl"></i>
+            </div>
+            <h3>Explore vacations</h3>
+        </div>
+        <div class="menu-box">
+            <div class="continent">
+                <p class="menu-subtitle">choose a continent</p>
+                <div class="vacation-cards">
+                    <a href="#" class="vacation-card">
+                        <h4>Africa</h4>
+                        <p>6 vacations</p>
+                        <i class="ph-light ph-caret-circle-right"></i>
+                    </a>
+                    <a href="#" class="vacation-card">
+                        <h4>Asia</h4>
+                        <p>6 vacations</p>
+                        <i class="ph-light ph-caret-circle-right"></i>
+                    </a>
+                    <a href="#" class="vacation-card">
+                        <h4>Europe</h4>
+                        <p>6 vacations</p>
+                        <i class="ph-light ph-caret-circle-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="country">
+                <p class="menu-subtitle">choose a destination</p>
+                <div class="vacation-cards">
+                    <a href="#" class="vacation-card">
+                        <h4>France</h4>
+                        <p>6 vacations</p>
+                        <i class="ph-light ph-caret-circle-right"></i>
+                    </a>
+                    <a href="#" class="vacation-card">
+                        <h4>Indonesia</h4>
+                        <p>6 vacations</p>
+                        <i class="ph-light ph-caret-circle-right"></i>
+                    </a>
+                    <a href="#" class="vacation-card">
+                        <h4>Greece</h4>
+                        <p>6 vacations</p>
+                        <i class="ph-light ph-caret-circle-right"></i>
+                    </a>
+                    <a href="#" class="vacation-card">
+                        <h4>Egypt</h4>
+                        <p>6 vacations</p>
+                        <i class="ph-light ph-caret-circle-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="contact">
+                <p class="menu-subtitle">contact us</p>
+                <div class="vacation-cards">
+                    <div class="vacation-card">
+                        <p>Schedule a call</p>
+                        <i class="ph-light ph-caret-circle-right"></i>
+                    </div>
+                    <div class="vacation-card">
+                        <p>info@template.com</p>
+                        <i class="ph-light ph-caret-circle-right"></i>
+                    </div>
+                    <div class="vacation-card">
+                        <p>(555) 555-5555</p>
+                        <i class="ph-light ph-caret-circle-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="sns">
+                <p class="menu-subtitle">follow us:</p>
+                <img class="social-icon" src="images/icons8-instagram-96.png" alt="instagram">
+                <img class="social-icon" src="images/icons8-facebook-96.png" alt="facebook">
+                <img class="social-icon" src="images/icons8-linkedin-96.png" alt="linkedin">
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <a class="logo" href="index.html">CO<span>VILLA</span></a>
+        <div class="overlay" id="overlay">
+            <nav id="nav">
+            </nav>
+        </div>
+        <button class="btn-des">
+            Destinations
+            <i class="ph ph-caret-down"></i>
+            <i class="ph ph-caret-up"></i>
+        </button>
+        <div class="dropdown-box">
+            <p class="dropdown-title">choose a location</p>
+            <div class="vacation-cards">
+                <a href="#" class="vacation-card">
+                    <h4>France</h4>
+                    <p>6 vacations</p>
+                    <i class="ph-light ph-caret-circle-right"></i>
+                </a>
+                <a href="#" class="vacation-card">
+                    <h4>Indonesia</h4>
+                    <p>6 vacations</p>
+                    <i class="ph-light ph-caret-circle-right"></i>
+                </a>
+                <a href="#" class="vacation-card">
+                    <h4>Greece</h4>
+                    <p>6 vacations</p>
+                    <i class="ph-light ph-caret-circle-right"></i>
+                </a>
+                <a href="#" class="vacation-card">
+                    <h4>Egypt</h4>
+                    <p>6 vacations</p>
+                    <i class="ph-light ph-caret-circle-right"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="promotion">
+            <div class="container">
+                <div class="promotion-message">
+                    <p>family travel agency</p>
+                    <h1>Let's plan your next vacation</h1>
+                    <button>contact us</button>
+                </div>
+                <div class="promotion-video">
+                    <div class="promotion-video-bg">
+                        <video src="images/pexels-rafael-moura-2249630-3840x2160-30fps.mp4" autoplay muted loop></video>
+                    </div>
+                    <div class="promotion-video-mask"></div>
+                    <div class="promotion-video-hover">
+                        <div class="promotion-video-hover-button">
+                            <i class="fa-solid fa-caret-right fa-xl"></i>
+                        </div>
+                    </div>
+                    <div class="promotion-video-wave">
+                        <!-- two outer circles -->
+                        <div class="promotion-video-wave-1">
+                        </div>
+                        <div class="promotion-video-wave-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="promotion-location">
+                <div class="promotion-floating">
+                    <p>popular location</p>
+                </div>
+                <div class="promotion-card">
+                    <div class="promotion-arrows">
+                        <div class="promotion-left-arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        <div class="promotion-right-arrow">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </div>
+                    </div>
+                    <div class="promotion-price">
+                        <h4>Thessaloniki, Greece</h4>
+                        <p>starting at $6700</p>
+                    </div>
+                    <div class="promotion-chevron">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="destination">
+            <p>covilla destinations</p>
+            <h2>Across the world</h2>
+            <div class="destination-photos">
+                <div class="destination-photo-card">
+                    <img src="images/indonesia1.jpg" alt="indonesia">
+                    <div class="destination-text">
+                        <p>6 vacations</p>
+                        <h3>Indonesia</h3>
+                    </div>
+                </div>
+                <div class="destination-photo-card">
+                    <img src="images/france1.jpg" alt="france">
+                    <div class="destination-text">
+                        <p>6 vacations</p>
+                        <h3>France</h3>
+                    </div>
+                </div>
+                <div class="destination-photo-card">
+                    <img src="images/greece2.jpg" alt="greece">
+                    <div class="destination-text">
+                        <p>6 vacations</p>
+                        <h3>Greece</h3>
+                    </div>
+                </div>
+                <div class="destination-photo-card">
+                    <img src="images/egypt2.jpg" alt="egypt">
+                    <div class="destination-text">
+                        <p>6 vacations</p>
+                        <h3>Egypt</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="horizontal-arrows">
+                <div class="destination-left-arrow">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="destination-right-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefit">
+            <div class="container">
+                <div class="benefit-summary">
+                    <div>
+                        <p>covilla benefits</p>
+                        <h2>Take your family on the best vacation</h2>
+                        <p>Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sed vitae
+                            sollicitudin elit, ac tristique nisi. Pellentesque rutrum egestas massa lacinia volutpat.
+                            Integer et facilisis elit, vitae.</p>
+                        <button>choose a destination</button>
+                    </div>
+                    <img src="images/jonathan-gallegos-_vA2q0-NroU-unsplash.jpg" alt="tourist attraction">
+                </div>
+                <p>why we're different</p>
+                <div class="benefit-items">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-window-restore"></i>
+                        </div>
+                        <div class="benefit-desc">
+                            <h4>Hands-on planning</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin eget velit.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-key"></i>
+                        </div>
+                        <div class="benefit-desc">
+                            <h4>Added value & perks</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin eget velit.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-suitcase"></i>
+                        </div>
+                        <div class="benefit-desc">
+                            <h4>Access best deals</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin eget velit.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+                        <div class="benefit-desc">
+                            <h4>Personalized</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin eget velit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial">
+            <div class="testimonial-msg-box">
+                <div class="testimonial-msg">
+                    <p>Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sed vitae sollicitudin
+                        elit, ac
+                        tristique nisi. Pellentesque rutrum egestas massa lacinia volutpat. Integer et facilisis elit,
+                        vitae
+                        lobortis enim.</p>
+                    <h4>Samantha Vohnhale</h4>
+                </div>
+                <div class="testimonial-msg">
+                    <p>Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sed vitae sollicitudin
+                        elit, ac
+                        tristique nisi. Pellentesque rutrum egestas massa lacinia volutpat. Integer et facilisis elit,
+                        vitae
+                        lobortis enim.</p>
+                    <h4>Wilson Tomales</h4>
+                </div>
+                <div class="testimonial-msg">
+                    <p>Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sed vitae sollicitudin
+                        elit, ac
+                        tristique nisi. Pellentesque rutrum egestas massa lacinia volutpat. Integer et facilisis elit,
+                        vitae
+                        lobortis enim.</p>
+                    <h4>Tammy Georgeon</h4>
+                </div>
+                <div class="testimonial-msg">
+                    <p>Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sed vitae sollicitudin
+                        elit, ac
+                        tristique nisi. Pellentesque rutrum egestas massa lacinia volutpat. Integer et facilisis elit,
+                        vitae
+                        lobortis enim.</p>
+                    <h4>Emily Camphon</h4>
+                </div>
+                <div class="testimonial-msg">
+                    <p>Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sed vitae sollicitudin
+                        elit, ac
+                        tristique nisi. Pellentesque rutrum egestas massa lacinia volutpat. Integer et facilisis elit,
+                        vitae
+                        lobortis enim.</p>
+                    <h4>Cassie Shamath</h4>
+                </div>
+            </div>
+            <div class="testimonial-indicator"></div>
+            <div class="horizontal-arrows">
+                <div class="testimonial-left-arrow">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="testimonial-right-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular">
+            <div class="container">
+                <p class="popular-title">popular covilla location</p>
+                <div class="popular-locations">
+                    <div class="location-names" id="location-names">
+                        <div class="location-name-card">
+                            <div data-location="1">egypt</div>
+                            <div class="dot" data-location="1"></div>
+                            <div class="dot-outline"></div>
+                        </div>
+                        <div class="location-name-card">
+                            <div data-location="2">greece</div>
+                            <div class="dot" data-location="2"></div>
+                            <div class="dot-outline"></div>
+                        </div>
+                        <div class="location-name-card">
+                            <div data-location="3">indonesia</div>
+                            <div class="dot" data-location="3"></div>
+                            <div class="dot-outline"></div>
+                        </div>
+                        <div class="location-name-card">
+                            <div data-location="4">france</div>
+                            <div class="dot" data-location="4"></div>
+                            <div class="dot-outline"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="location-cards">
+                            <div class="location-card">
+                                <div class="location-card-img">
+                                    <img src="images/egypt1.jpg" alt="bahariya oasis">
+                                </div>
+                                <h4>Bahariya Oasis</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin eget.</p>
+                                <div class="location-price">
+                                    <div>
+                                        <p>RATES FROM</p>
+                                        <p>$6400</p>
+                                    </div>
+                                    <button>details</button>
+                                </div>
+                            </div>
+                            <div class="location-card">
+                                <div class="location-card-img">
+                                    <img src="images/egypt3.jpg" alt="bahariya oasis">
+                                </div>
+                                <h4>Sahl Hasheesh</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin eget.</p>
+                                <div class="location-price">
+                                    <div>
+                                        <p>RATES FROM</p>
+                                        <p>$7700</p>
+                                    </div>
+                                    <button>details</button>
+                                </div>
+                            </div>
+                            <div class="location-card">
+                                <div class="location-card-img">
+                                    <img src="images/egypt4.jpg" alt="bahariya oasis">
+                                </div>
+                                <h4>Alexandria</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin eget.</p>
+                                <div class="location-price">
+                                    <div>
+                                        <p>RATES FROM</p>
+                                        <p>$5300</p>
+                                    </div>
+                                    <button>details</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="location-cards">
+                            <div class="location-card">
+                                <div class="location-card-img">
+                                    <img src="images/greece3.jpg" alt="palaiokastritsa">
+                                </div>
+                                <h4>Palaiokastritsa</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin eget.</p>
+                                <div class="location-price">
+                                    <div>
+                                        <p>RATES FROM</p>
+                                        <p>$5600</p>
+                                    </div>
+                                    <button>details</button>
+                                </div>
+                            </div>
+                            <div class="location-card">
+                                <div class="location-card-img">
+                                    <img src="images/greece4.jpg" alt="palaiokastritsa">
+                                </div>
+                                <h4>Meteora</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin eget.</p>
+                                <div class="location-price">
+                                    <div>
+                                        <p>RATES FROM</p>
+                                        <p>$2800</p>
+                                    </div>
+                                    <button>details</button>
+                                </div>
+                            </div>
+                            <div class="location-card">
+                                <div class="location-card-img">
+                                    <img src="images/greece1.jpg" alt="palaiokastritsa">
+                                </div>
+                                <h4>Thessaloniki</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin eget.</p>
+                                <div class="location-price">
+                                    <div>
+                                        <p>RATES FROM</p>
+                                        <p>$6700</p>
+                                    </div>
+                                    <button>details</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="location-cards">
+                            <div class="location-card">
+                                <div class="location-card-img">
+                                    <img src="images/indonesia2.jpg" alt="canggu">
+                                </div>
+                                <h4>Canggu</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin eget.</p>
+                                <div class="location-price">
+                                    <div>
+                                        <p>RATES FROM</p>
+                                        <p>$6500</p>
+                                    </div>
+                                    <button>details</button>
+                                </div>
+                            </div>
+                            <div class="location-card">
+                                <div class="location-card-img">
+                                    <img src="images/indonesia3.jpg" alt="canggu">
+                                </div>
+                                <h4>Komodo</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin eget.</p>
+                                <div class="location-price">
+                                    <div>
+                                        <p>RATES FROM</p>
+                                        <p>$7600</p>
+                                    </div>
+                                    <button>details</button>
+                                </div>
+                            </div>
+                            <div class="location-card">
+                                <div class="location-card-img">
+                                    <img src="images/indonesia4.jpg" alt="canggu">
+                                </div>
+                                <h4>Penida Island</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin eget.</p>
+                                <div class="location-price">
+                                    <div>
+                                        <p>RATES FROM</p>
+                                        <p>$2800</p>
+                                    </div>
+                                    <button>details</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="location-cards">
+                            <div class="location-card">
+                                <div class="location-card-img">
+                                    <img src="images/france2.jpg" alt="bonifacio">
+                                </div>
+                                <h4>Bonifacio</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin eget.</p>
+                                <div class="location-price">
+                                    <div>
+                                        <p>RATES FROM</p>
+                                        <p>$1400</p>
+                                    </div>
+                                    <button>details</button>
+                                </div>
+                            </div>
+                            <div class="location-card">
+                                <div class="location-card-img">
+                                    <img src="images/france3.jpg" alt="bonifacio">
+                                </div>
+                                <h4>Brittany</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin eget.</p>
+                                <div class="location-price">
+                                    <div>
+                                        <p>RATES FROM</p>
+                                        <p>$3600</p>
+                                    </div>
+                                    <button>details</button>
+                                </div>
+                            </div>
+                            <div class="location-card">
+                                <div class="location-card-img">
+                                    <img src="images/france4.jpg" alt="bonifacio">
+                                </div>
+                                <h4>Carcassonne</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin eget.</p>
+                                <div class="location-price">
+                                    <div>
+                                        <p>RATES FROM</p>
+                                        <p>$3900</p>
+                                    </div>
+                                    <button>details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="promise">
+            <p class="promise-title">COVILLA PROMISE</p>
+            <h2>Get unparalleled peace of mind from start to finish of your trip</h2>
+            <div>
+                <button>CONTACT US</button>
+                <button><a href="#instruction">HOW IT WORKS</a>
+                </button>
+            </div>
+        </section>
+
+        <section class="instruction" id="instruction">
+            <div class="container">
+                <div class="instruction-left">
+                    <img src="images/swipe1.jpg" alt="a group of people on vacation">
+                    <p>get started today</p>
+                    <h3>Take the stress out of planning vacations</h3>
+                    <p>Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sed vitae sollicitudin
+                        elit, ac tristique nisi.</p>
+                    <button>meet your travel agents</button>
+                </div>
+                <div class="instruction-right">
+                    <p class="instruction-title">how it works</p>
+                    <div class="instruction-cards">
+                        <div class="instruction-line"></div>
+                        <div class="instruction-card">
+                            <i class="ph ph-number-circle-one"></i>
+                            <h4>First, clone this template.</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin eget velit ut
+                                sollicitudin. Nunc ullamcorper nibh nulla. In viverra id felis id tincidunt.</p>
+                        </div>
+                        <div class="instruction-card">
+                            <i class="ph ph-number-circle-two"></i>
+                            <h4>Next, use it on your projects.</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin eget velit ut
+                                sollicitudin. Nunc ullamcorper nibh nulla. In viverra id felis id tincidunt.</p>
+                        </div>
+                        <div class="instruction-card">
+                            <i class="ph ph-number-circle-three"></i>
+                            <h4>Then, tell me what you think.</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin eget velit ut
+                                sollicitudin. Nunc ullamcorper nibh nulla. In viverra id felis id tincidunt.</p>
+                        </div>
+                        <div class="instruction-card">
+                            <i class="ph ph-number-circle-four"></i>
+                            <h4>Finally, share the template.</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin eget velit ut
+                                sollicitudin. Nunc ullamcorper nibh nulla. In viverra id felis id tincidunt.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="container">
+                <p class="about-title">about covilla</p>
+                <div class="about-content">
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin eget velit ut
+                        sollicitudin. Nunc ullamcorper nibh nulla.</h3>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin eget velit ut
+                            sollicitudin. Nunc ullamcorper nibh nulla. In viverra id felis id tincidunt.</p>
+                        <p>Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sed vitae
+                            sollicitudin elit, ac tristique nisi. Pellentesque rutrum egestas massa lacinia volutpat.
+                            Integer et facilisis elit, vitae lobortis enim.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="carousel">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="images/swipe1.jpg" alt="vacation picture">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/swipe2.jpg" alt="vacation picture">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/swipe3.jpg" alt="vacation picture">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/swipe4.jpg" alt="vacation picture">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/swipe5.jpg" alt="vacation picture">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/swipe6.jpg" alt="vacation picture">
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="agent">
+            <div class="container">
+                <div class="agent-title">
+                    <p>meet your travel agents</p>
+                    <button>about us</button>
+                </div>
+                <div class="agent-cards">
+                    <div class="agent-card">
+                        <div class="agent-img">
+                            <img src="images/headshot1.jpg" alt="headshot">
+                        </div>
+                        <h4>Samantha Tai</h4>
+                        <p>New York, New York</p>
+                    </div>
+                    <div class="agent-card">
+                        <div class="agent-img">
+                            <img src="images/headshot2.jpg" alt="headshot">
+                        </div>
+                        <h4>Sarah Prat</h4>
+                        <p>Austin, Texas</p>
+                    </div>
+                    <div class="agent-card">
+                        <div class="agent-img">
+                            <img src="images/headshot3.jpg" alt="headshot">
+                        </div>
+                        <h4>Alex Von</h4>
+                        <p>Miami, Florida</p>
+                    </div>
+                    <div class="agent-card">
+                        <div class="agent-img">
+                            <img src="images/headshot4.jpg" alt="headshot">
+                        </div>
+                        <h4>Cindy Wents</h4>
+                        <p>New York, New York</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="post">
+            <div class="container">
+                <div class="post-left">
+                    <div class="post-left-img">
+                        <img src="images/byron-johnson-NnSQMP-e22E-unsplash.jpg" alt="spring picture">
+                    </div>
+                    <div class="post-floating">
+                        <p class="post-date">APRIL 19, 2021</p>
+                        <h3>What Will Website Be Like In 100 Years?</h3>
+                        <p>Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sed vitae
+                            sollicitudin elit, ac tristique.</p>
+                        <button>read more</button>
+                    </div>
+                </div>
+                <div class="post-right">
+                    <p class="post-title">popular posts</p>
+                    <div class="post-cards">
+                        <div class="post-card">
+                            <div class="post-card-img">
+                                <img src="images/post1.jpg" alt="beach">
+                            </div>
+                            <div class="post-card-content">
+                                <p class="post-date">APRIL 19, 2021</p>
+                                <h4>7 of the Best Examples of Beautiful Blog Design</h4>
+                            </div>
+                        </div>
+                        <div class="post-card">
+                            <div class="post-card-img">
+                                <img src="images/post2.jpg" alt="beach">
+                            </div>
+                            <div class="post-card-content">
+                                <p class="post-date">APRIL 19, 2021</p>
+                                <h4>Designers Who Changed the Web Massively</h4>
+                            </div>
+                        </div>
+                        <div class="post-card">
+                            <div class="post-card-img">
+                                <img src="images/post3.jpg" alt="beach">
+                            </div>
+                            <div class="post-card-content">
+                                <p class="post-date">APRIL 19, 2021</p>
+                                <h4>10 Web Design Blogs You Can't Miss</h4>
+                            </div>
+                        </div>
+                        <div class="post-card">
+                            <div class="post-card-img">
+                                <img src="images/post4.jpg" alt="beach">
+                            </div>
+                            <div class="post-card-content">
+                                <p class="post-date">APRIL 19, 2021</p>
+                                <h4>5 Principles Of Effective Web Design</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="ending-links">
+            <div class="destinations">
+                <a href="">destinations</a>
+                <a href="">france</a>
+                <a href="">indonesia</a>
+                <a href="">greece</a>
+                <a href="">egypt</a>
+            </div>
+            <a class="logo" href="index.html">CO<span>VILLA</span></a>
+        </div>
+        <p>&copy 2023 COVILLA</p>
+    </footer>
+
+    <script src="index.js">
+    </script>
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js">
+    </script>
+    <!-- initialize swiper -->
+    <script>
+        const swiper = new Swiper('.swiper', {
+            effect: "coverflow",
+            grabCursor: true,
+            slidesPerView: "auto",
+            loop: true,
+            coverflowEffect: {
+                rotate: 30,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            }
+        });
+    </script>
+</body>
+
+</html>
