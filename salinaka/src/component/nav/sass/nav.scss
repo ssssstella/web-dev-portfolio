@@ -1,0 +1,16 @@
+@import "../../../sass/index.scss";
+
+.nav {
+    .link {
+        text-decoration: none;
+        margin-right: 30px;
+        font-size: 0.8rem;
+        color: $darkgrey;
+    }
+
+    .highlight {
+        color: $black;
+        background-color: $midgrey;
+        padding: 5px;
+    }
+}

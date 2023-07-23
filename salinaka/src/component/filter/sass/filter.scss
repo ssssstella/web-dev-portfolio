@@ -1,0 +1,61 @@
+@import "../../../sass/index.scss";
+
+
+
+.filter {
+    position: fixed;
+    top: calc(50% - 240px);
+    left: calc(50% - 250px);
+    width: 500px;
+    height: 480px;
+    background-color: white;
+    border: 1px solid $darkgrey;
+    border-radius: 5px;
+    padding: 50px 30px;
+    z-index: 1;
+
+    &--selector {
+        padding: 20px;
+        border-bottom: 1px solid $midgrey;
+        margin-bottom: 20px;
+
+        .MuiSlider-thumb {
+            height: 24px;
+            width: 24px;
+            color: white;
+            border: 2px solid #52af77;
+        }
+
+    }
+
+    &--selector:first-child {
+        display: flex;
+        gap: 0.5rem;
+
+        .select {
+            width: 50%;
+            margin: 0;
+
+            .MuiSelect-select {
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    &--selector:nth-child(2) {
+        p {
+            margin-bottom: 20px;
+        }
+        h4 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+
+    &--btn {
+        display: flex;
+        button {
+            width: 50%;
+        }
+    }
+}

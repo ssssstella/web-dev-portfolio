@@ -1,0 +1,56 @@
+/* variables */
+/* general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: #212121;
+}
+
+a {
+  color: #212121;
+  cursor: pointer;
+}
+
+button {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  background-color: #212121;
+  color: white;
+}
+
+.logo {
+  width: 120px;
+  height: 100px;
+}
+
+/* typography */
+/* layout */
+/* footer */
+.footer {
+  padding: 50px;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer p {
+  font-size: 0.8rem;
+  color: #4e4e4e;
+}
+
+.footer div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

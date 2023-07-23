@@ -1,0 +1,82 @@
+/* variables */
+/* general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: #212121;
+  background-color: rgba(242, 242, 242, 0.4);
+}
+
+.link {
+  color: #212121;
+  cursor: pointer;
+}
+
+button {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  background-color: #212121;
+  color: white;
+}
+
+.btn-light {
+  background-color: #f2f2f2;
+  border: 1px solid #cecece;
+  color: #4e4e4e;
+}
+
+/* typography */
+h1 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.small-text {
+  font-size: 0.8rem;
+  color: #4e4e4e;
+}
+
+/* layout */
+.shopmodal {
+  position: fixed;
+  top: calc(50% - 100px);
+  left: calc(50% - 200px);
+  width: 400px;
+  height: 200px;
+  background-color: white;
+  border: 1px solid #cecece;
+  border-radius: 5px;
+  padding: 50px 20px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.shopmodal div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.shopmodal div button {
+  height: 45px;
+}

@@ -1,0 +1,246 @@
+@import "../../../sass/index.scss";
+
+/* product card1 */
+.productCard1 {
+    a {
+        text-decoration: none;
+    }
+
+    .MuiCardMedia-root {
+        background-color: $lightgrey;
+        background-size: 100% 100%;
+        transition: 1s;
+    }
+}
+
+
+.productCard1:hover .MuiCardMedia-root {
+    background-size: 110% 110%;
+}
+
+
+/* product card2 */
+.productCard2 {
+    position: relative;
+
+    .product--checked {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+    }
+
+    .MuiCardMedia-root {
+        background-color: $lightgrey;
+        transition: 0.5s;
+    }
+
+    .MuiCardContent-root {
+        padding: 16px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hide {
+        display: none;
+        transition: 1s;
+    }
+}
+
+.productCard2:hover {
+    .hide {
+        display: block;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .MuiCardMedia-root {
+        height: 80px;
+        background-size: auto 100%;
+    }
+
+    .MuiCardContent-root {
+        padding: 24px 0;
+    }
+}
+
+
+
+/* product panel1 */
+.productPanel1 {
+    width: 80%;
+    margin: 0 auto 150px auto;
+
+    &--title {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 30px;
+
+        h3 {
+            font-weight: 500;
+        }
+
+    }
+
+    &--grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 2rem;
+    }
+}
+
+
+/* product panel on shop page */
+.shop {
+    width: 85%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--filterResult {
+        text-align: center;
+        .result-title {
+            margin-bottom: 30px;
+        }
+
+        .result-box {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 40px;
+
+            .result-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                div {
+                    margin-top: 10px;
+                    height: 40px;
+                    padding: 0.5rem 1rem;
+                    background-color: $midgrey;
+                    color: $darkgrey;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 20px;
+                    .clearIcon {
+                        margin-left: 0.5rem;
+                        cursor: pointer;
+                    }
+                }
+               
+               
+            }
+        }
+    }
+
+    &--grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 180px));
+        grid-gap: 1.25rem;
+    }
+
+    button {
+        margin-top: 30px;
+    }
+}
+
+
+/* product card detail */
+.productCardDetail {
+    width: 80%;
+    margin: 50px auto;
+
+    .link {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .detailPanel {
+        height: 500px;
+        display: flex;
+        border: 1px solid $midgrey;
+
+        &--left {
+            width: 13%;
+            padding: 0.6rem;
+
+            div {
+                border: 1px solid $midgrey;
+                height: 100px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        &--bar {
+            width: 1%;
+            background-color: $midgrey;
+        }
+
+        &--middle {
+            width: 38%;
+            background-color: $lightgrey;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        &--right {
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+            padding: 50px 30px;
+            justify-content: space-between;
+
+            h4 {
+                margin-top: -1rem;
+            }
+
+            .select {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .MuiInputBase-root {
+                height: 40px;
+            }
+
+            .MuiInputLabel-root {
+                top: -7px;
+            }
+
+            .MuiFormGroup-row {
+                padding: 0 0.8rem;
+                display: flex;
+                gap: 1rem;
+
+                .MuiRadio-root {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
+            button {
+                width: 120px;
+                margin-top: 1rem;
+            }
+        }
+    }
+}

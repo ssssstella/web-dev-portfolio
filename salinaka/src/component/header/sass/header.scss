@@ -1,0 +1,98 @@
+@import "../../../sass/index.scss";
+
+/* header */
+.header {
+    position: relative;
+    height: 110px;
+    background-color: $transgrey;
+    padding: 0 50px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    z-index: 1;
+
+    .filterBackdrop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #e6e6e6bc;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .shopModalBackdrop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #e6e6e6bc;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    &--left,
+    &--right {
+        display: flex;
+        align-items: center;
+    }
+
+    &--left {
+        gap: 30px;
+    }
+
+    &--right {
+        .header--shop {
+            margin-right: 50px;
+            display: flex;
+            align-items: center;
+
+            &--icon {
+                cursor: pointer;
+            }
+
+            &--filter {
+                width: 100px;
+                height: 40px;
+                border: 1px solid $midgrey;
+                background-color: $lightgrey;
+                color: $darkgrey;
+                font-size: 0.8rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.3rem;
+                cursor: pointer;
+            }
+
+            input[type="search"] {
+                width: 300px;
+                height: 40px;
+                padding-left: 40px;
+                border: 1px solid $midgrey;
+                margin-right: 1rem;
+                background-image: url("/public/assets/magnifying-glass.svg");
+                background-repeat: no-repeat;
+                background-size: 20px 20px;
+                background-position: 5% center;
+            }
+
+            
+
+        }
+
+        .header--account {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            cursor: pointer;
+        }
+
+        .header--regis {
+            button {
+                margin-left: 12px;
+            }
+
+        }
+
+    }
+}

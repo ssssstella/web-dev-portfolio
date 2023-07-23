@@ -1,0 +1,71 @@
+/* variables */
+$transgrey: rgba(242, 242, 242, 0.4);
+$lightgrey: rgb(242, 242, 242);
+$darkgrey: rgb(78, 78, 78);
+$midgrey: lighten($darkgrey, 50%);
+$black: #212121;
+
+
+
+/* general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: $black;
+    background-color: $transgrey;
+}
+
+// .app {
+//     position: relative;
+// }
+
+.link {
+    color: $black;
+    cursor: pointer;
+}
+
+button {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    background-color: $black;
+    color: white;
+}
+
+.btn-light {
+    background-color: $lightgrey;
+    border: 1px solid $midgrey;
+    color: $darkgrey;
+}
+
+/* typography */
+h1 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+
+.small-text {
+    font-size: 0.8rem;
+    color: $darkgrey
+}
+
+/* layout */

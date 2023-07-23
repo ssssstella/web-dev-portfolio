@@ -1,0 +1,50 @@
+/* variables */
+/* general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: #212121;
+  background-color: rgba(242, 242, 242, 0.4);
+}
+
+.link {
+  color: #212121;
+  cursor: pointer;
+}
+
+button {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  background-color: #212121;
+  color: white;
+}
+
+.btn-light {
+  background-color: #f2f2f2;
+  border: 1px solid #cecece;
+  color: #4e4e4e;
+}
+
+/* typography */
+h1 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+/* layout */
+.signup {
+  margin-bottom: 70px;
+}
