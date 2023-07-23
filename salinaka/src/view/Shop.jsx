@@ -23,7 +23,7 @@ export default function Shop() {
   })
 
   // initialize price range values and filter values
-  const prices = [... new Set(products.map(product => product.price))];
+  const prices = [...new Set(products.map(product => product.price))];
   const prange = [Math.min(...prices), Math.max(...prices)];
   const filterDefault = { 'brand': 'All Brands', 'sort': 'None', 'priceRange': prange };
   let filter = JSON.parse(localStorage.getItem('filter')) ? JSON.parse(localStorage.getItem('filter')) : filterDefault;

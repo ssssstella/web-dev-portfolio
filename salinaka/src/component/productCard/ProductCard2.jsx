@@ -17,7 +17,7 @@ export default function ProductCard2({id}) {
     useEffect(()=>{
         setItem(products.filter(product => product.id === Number(id))[0])
     }, [products])
-
+   
     const updateItem = () => {
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -29,7 +29,7 @@ export default function ProductCard2({id}) {
             // update isAdded to true
             setProducts(prevProducts => {
                 const updatedProducts = [];
-                prevProducts.map(product => {
+                prevProducts.forEach(product => {
                     if (product.id !== item.id) {
                         updatedProducts.push(product)
                     }
@@ -43,7 +43,7 @@ export default function ProductCard2({id}) {
         } else {
             // if product has been added before, remove it from cart
             const updatedCart = []
-            cart.map(cartItem => {
+            cart.forEach(cartItem => {
                 if (cartItem.productId !== item.id) {
                     updatedCart.push(cartItem);
                 }
@@ -52,7 +52,7 @@ export default function ProductCard2({id}) {
             // update isAdded to false
             setProducts(prevProducts => {
                 const updatedProducts = [];
-                prevProducts.map(product => {
+                prevProducts.forEach(product => {
                     if (product.id !== item.id) {
                         updatedProducts.push(product)
                     }

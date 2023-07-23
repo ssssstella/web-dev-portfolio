@@ -4,7 +4,7 @@ import Routerview from "./view/Routerview";
 import { BrowserRouter } from "react-router-dom";
 import "./sass/index.css";
 import MainContext from './component/context/Context';
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import data from "./data";
 
 

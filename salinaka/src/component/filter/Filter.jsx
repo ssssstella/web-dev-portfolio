@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -11,10 +11,10 @@ import "./sass/filter.css";
 
 export default function Filter() {
     // get 'products' state 
-    const { products, filterLocal, setFilterLocal, showFilter, setShowFilter} = useContext(MainContext);
+    const { products, filterLocal, setFilterLocal, setShowFilter} = useContext(MainContext);
 
     // initialize brand select values
-    const brands = [... new Set(products.map(product => product.brand))];
+    const brands = [...new Set(products.map(product => product.brand))];
     brands.unshift('All Brands');
 
     // initialize sortBy select values
@@ -25,7 +25,7 @@ export default function Filter() {
     { label: 'Price Low - High', value: ['price', 'a'] }]
 
     // initialize price range values
-    const prices = [... new Set(products.map(product => product.price))];
+    const prices = [...new Set(products.map(product => product.price))];
     const prange = [Math.min(...prices), Math.max(...prices)];
 
     // fetch filter value
@@ -38,15 +38,6 @@ export default function Filter() {
         filter = JSON.parse(localStorage.getItem('filter'));
     }
 
-    
-    // useEffect(() => {
-    //     if (showFilter) {
-    //         const filter_div = document.querySelector(".filter");
-    //         filter_div.addEventListener('click', (e) => {
-    //             e.stopPropagation();
-    //         })
-    //     }
-    // })
 
     // brand select
     const [brand, setBrand] = useState(filter.brand || 'All Brands');

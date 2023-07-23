@@ -10,7 +10,7 @@ export default function Footer() {
                 <Logo/>
                 <p>&copy; 2023</p>
             </div>
-            <p>Folk this project <a href="#">HERE</a></p>
+            <p>Folk this project <a href="https://github.com/ssssstella/web-dev-portfolio/tree/main/salinaka">HERE</a></p>
         </div>
     )
 }

@@ -6,7 +6,7 @@ import MainContext from '../context/Context';
 
 export default function Cart() {
     const [cart, setCart] = useState([]);
-    const {setProducts, cartLocal, setCartLocal, setShowCart, setShowShopModal} = useContext(MainContext);
+    const {setProducts, cartLocal, setCartLocal, setShowCart} = useContext(MainContext);
 
     useEffect(() => {
         setCart(JSON.parse(localStorage.getItem('cart')))
@@ -54,7 +54,7 @@ export default function Cart() {
     const handleRemoveProduct = (comboId, productId) => {
         setCart((prevCart) => {
             const updatedCart = [];
-            prevCart.map(item => {
+            prevCart.forEach(item => {
                 if (item.comboId !== comboId) {
                     updatedCart.push(item)
                 }
@@ -62,7 +62,7 @@ export default function Cart() {
 
             // after removing combo, check if there're combos from the same product 
             let productFlag = false;
-            updatedCart.map(item => {
+            updatedCart.forEach(item => {
                 if (item.productId === productId) {
                     productFlag = true;
                 }
@@ -71,7 +71,7 @@ export default function Cart() {
                 // if there's no combo from the same product, update isAdded to false
                 setProducts(prevProducts => {
                     const updatedProducts = [];
-                    prevProducts.map(product => {
+                    prevProducts.forEach(product => {
                         if (product.id !== productId) {
                             updatedProducts.push(product)
                         }
@@ -94,7 +94,7 @@ export default function Cart() {
     const handleUpdateQuantity = (comboId, operation) => {
         setCart((prevCart) => {
             const updatedCart = [];
-            prevCart.map(item => {
+            prevCart.forEach(item => {
                 if (item.comboId === comboId) {
                     if (operation === 'add') {
                         item = { ...item, quantity: item.quantity + 1 }
@@ -115,11 +115,11 @@ export default function Cart() {
     }
 
     const handleCartClear = () => {
-        const productsToUpdate = [... new Set(cart.map(item => item.productId))];
-        productsToUpdate.map(pid => {
+        const productsToUpdate = [...new Set(cart.map(item => item.productId))];
+        productsToUpdate.forEach(pid => {
             setProducts(prevProducts => {
                 const updatedProducts = [];
-                prevProducts.map(product => {
+                prevProducts.forEach(product => {
                     if (product.id !== pid) {
                         updatedProducts.push(product)
                     }

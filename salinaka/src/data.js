@@ -1,4 +1,4 @@
-export default [
+const data = [
     {   
         id: 1,
         name: "Sugat",
@@ -180,3 +180,5 @@ export default [
         color: ["rgb(0, 0, 0)", "rgb(197, 0, 197)", "rgb(0, 77, 132)", "rgb(117, 54, 0)", "rgb(253, 138, 8)", "rgb(255, 82, 183)"]
     },
 ]
+
+export default data;

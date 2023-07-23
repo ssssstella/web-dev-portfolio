@@ -45,7 +45,7 @@ export default function ProductCardDetail() {
             // update isAdded to true
             setProducts(prevProducts => {
                 const updatedProducts = [];
-                prevProducts.map(product => {
+                prevProducts.forEach(product => {
                     if (product.id !== item.id) {
                         updatedProducts.push(product)
                     }
