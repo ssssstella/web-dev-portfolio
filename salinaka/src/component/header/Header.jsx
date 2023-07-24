@@ -75,6 +75,8 @@ export default function Header() {
 
     
     const jumptoAccount = () => {
+        const headerUser = document.querySelector('.header--user');
+        headerUser.style.opacity = 0;
         navigate('/accountcenter');
     }
 
