@@ -11,7 +11,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import "./sass/signup.css";
 
 
@@ -19,13 +19,17 @@ import "./sass/signup.css";
 const defaultTheme = createTheme();
 
 export default function SignUp() {
+  const navigate = useNavigate();
+  const jumpToMain = () => {
+    navigate(`/main`);
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+    const token = { firstName: data.get('firstName'), lastName: data.get('lastName'), email: data.get('email'), password: data.get('password') }
+    localStorage.setItem('token', JSON.stringify(token));
+    jumpToMain();
   };
 
   return (

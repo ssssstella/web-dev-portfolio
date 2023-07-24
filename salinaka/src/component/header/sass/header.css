@@ -141,3 +141,25 @@ h4 {
 .header--right .header--regis button {
   margin-left: 12px;
 }
+
+.header--right .header--user {
+  position: fixed;
+  top: 80px;
+  right: 50px;
+  width: 160px;
+  background-color: white;
+  font-size: 0.8rem;
+  opacity: 0;
+}
+
+.header--right .header--user div {
+  display: flex;
+  padding: 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header--right .header--user div:first-child {
+  border-bottom: 1px solid #f2f2f2;
+}

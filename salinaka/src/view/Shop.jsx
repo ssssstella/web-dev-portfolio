@@ -3,12 +3,15 @@ import ProductCard2 from '../component/productCard/ProductCard2';
 import '../component/productCard/sass/productcard.css';
 import MainContext from '../component/context/Context';
 import { XCircle } from "@phosphor-icons/react";
+import store from "../component/store/store";
+
+
 
 export default function Shop() {
   const { products, filterLocal, setFilterLocal } = useContext(MainContext);
   const cardList = localStorage.getItem('renderAllCards') === 'y' ? products : products.slice(2, 14);
   const [selected, setSelected] = useState(cardList);
-
+ 
   useEffect(() => {
     const btn = document.querySelector("#showAll-btn");
     btn.addEventListener('click', () => {
@@ -22,6 +25,20 @@ export default function Shop() {
     })
   })
 
+  // apply search
+  const [searchContent, setSearchContent] = useState('');
+
+  useEffect(() => {
+       // after getting search content, search in product name
+      store.subscribe(() => {
+        let searchStr = store.getState().search;
+        const searchResult = products.filter(product => product.name.toLowerCase().search(searchStr.toLowerCase()) !== -1);
+        setSelected(searchResult);
+        setSearchContent(searchStr);
+      })
+  }, [store])
+
+
   // initialize price range values and filter values
   const prices = [...new Set(products.map(product => product.price))];
   const prange = [Math.min(...prices), Math.max(...prices)];
@@ -31,11 +48,11 @@ export default function Shop() {
   // initialize filter result flag
   const [filterResultFlag, setFilterResultFlag] = useState([false, false, false]);
 
-  let isFirstRender = useRef(true);
-
+ 
+  let isFirstFilterRender = useRef(true);
   useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
+    if (isFirstFilterRender.current) {
+      isFirstFilterRender.current = false;
     } else {
       let filteredProducts;
       if (!isFilterEqual(filter, filterDefault)) {
@@ -101,7 +118,9 @@ export default function Shop() {
         </div>
       </div> : ''}
 
-      <div className='shop--grid'>
+      {searchContent && selected.length ? <div className='shop--searchResult'><p className='result-title'>Found {selected.length} products with keyword {searchContent}</p></div> : ''}
+
+      {selected.length ? <div className='shop--grid'>
         {selected.map(item => {
           return <ProductCard2
             key={item.id}
@@ -109,6 +128,10 @@ export default function Shop() {
           />
         })}
       </div>
+        : <div className='shop--empty'>
+          <h4>No product found.</h4>
+        </div>}
+
       <button id="showAll-btn" style={{ opacity: localStorage.getItem('renderAllCards') === 'y' ? 0 : 1 }}>Show More Items</button>
     </div>
   )

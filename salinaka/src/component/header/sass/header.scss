@@ -94,5 +94,26 @@
 
         }
 
+        .header--user {
+            position: fixed;
+            top: 80px;
+            right: 50px;
+            width: 160px;
+            background-color: white;
+            font-size: 0.8rem;
+            opacity: 0;
+
+            div {
+                display: flex;
+                padding: 10px 20px;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+            }
+            div:first-child {
+                border-bottom: 1px solid $lightgrey;
+            }
+        }
+
     }
 }

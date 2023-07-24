@@ -19,16 +19,17 @@ const defaultTheme = createTheme();
 
 export default function SignIn() {
   const navigate = useNavigate();
-  const jumpToAccount = () => {
-    navigate(`/accountcenter`);
+  const jumpToMain = () => {
+    navigate(`/main`);
   }
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+    // compare token with backend in the future
     const token = { email: data.get('email'), password: data.get('password') }
     localStorage.setItem('token', JSON.stringify(token));
-    jumpToAccount();
+    jumpToMain();
   };
 
   return (

@@ -186,11 +186,28 @@ h4 {
   cursor: pointer;
 }
 
+.shop--searchResult {
+  text-align: center;
+}
+
+.shop--searchResult .result-title {
+  margin-bottom: 30px;
+}
+
 .shop--grid {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 180px));
   grid-gap: 1.25rem;
+}
+
+.shop--empty {
+  width: 100%;
+  height: 500px;
+  background-color: #cecece;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .shop button {
