@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Open+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <head>
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    </head>
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="hero-pricing">
+        <header>
+            <div class="container">
+                <div class="branding">
+                    <a href="index.html">
+                        <h4 class="logo-text">weatherstack</h4>
+                    </a>
+                </div>
+                <nav>
+                    <a class="nav-item" href="pricing.html">
+                        <p>Pricing</p>
+                    </a>
+                    <a class="nav-item" href="documentation.html">
+                        <p>Documentation</p>
+                    </a>
+                    <a class="nav-item" href="">
+                        <p>FAQ</p>
+                    </a>
+                    <a class="nav-item" href="">
+                        <p>Blog</p>
+                    </a>
+                    <a class="nav-item" href="">
+                        <p id="status">Status</p>
+                    </a>
+                    <a class="nav-item" id="login" href="">
+                        <p>Log In</p>
+                    </a>
+                    <a class="nav-item" id="signup" href="">
+                        <p>SIGN UP FREE</p>
+                    </a>
+                </nav>
+            </div>
+        </header>
+        <section class="billing">
+            <div class="container">
+                <h2 class="billing-text">Fair Pricing for Any Weather</h2>
+                <div class="billing-type">
+                    <div class="monthly-box">
+                        <div class="checkbox">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p>Monthly Billing</p>
+                    </div>
+                    <div class="yearly-box">
+                        <div class="checkbox">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p>Yearly Billing</p>
+                        <div class="discount">
+                            <p>20% discount</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+    <section class="products">
+        <div class="container">
+            <div class="product-pricecards">
+                <div class="product-pricecard">
+                    <h4 class="product-type"><i class="ph ph-cloud"></i> Free</h4>
+                    <p class="type-desc">No credit card required.</p>
+                    <p class="product-price"><strong>$0 </strong>per month</p>
+                    <p class="product-billing"></p>
+                    <a class="product-signup" href="">SIGN UP</a>
+                </div>
+                <div class="product-pricecard">
+                    <h4 class="product-type"><i class="ph ph-cloud-sun"></i> Standard</h4>
+                    <p class="type-desc">Standard level — includes commercial use with up to 50.000 requests.</p>
+                    <p class="product-price"><strong>$7<span class="up">.99</span></strong>per month</p>
+                    <p class="product-billing">billed yearly</p>
+                    <a class="product-signup" href="">SIGN UP</a>
+                </div>
+                <div class="product-pricecard professional">
+                    <h4 class="product-type"><i class="ph ph-sun"></i> Professional</h4>
+                    <p class="type-desc">Professional level — premium features with up to 300.000 monthly requests.</p>
+                    <p class="product-price"><strong>$39<span class="up">.99</span></strong>per month</p>
+                    <p class="product-billing">billed yearly</p>
+                    <a class="product-signup" href="">SIGN UP</a>
+                    <div class="popular-tag">
+                        <p>MOST POPULAR</p>
+                    </div>
+                </div>
+                <div class="product-pricecard">
+                    <h4 class="product-type"><i class="ph ph-snowflake"></i> Business</h4>
+                    <p class="type-desc">Business level — every feature we have and up to 1.000.000 monthly requests.
+                    </p>
+                    <p class="product-price"><strong>$79<span class="up">.99</span></strong>per month</p>
+                    <p class="product-billing">billed yearly</p>
+                    <a class="product-signup" href="">SIGN UP</a>
+                </div>
+                <div class="product-pricecard enterprise">
+                    <h4 class="product-type"><i class="ph ph-buildings"></i> Enterprise</h4>
+                    <p class="type-desc">Looking for more?<br>
+                        Contact us for a quote.</p>
+                    <p class="product-price"><strong>Custom Pricing</strong></p>
+                    <p class="product-billing">Tailored to your needs</p>
+                    <a class="product-signup" href="">CONTACT US</a>
+                </div>
+            </div>
+            <div class="product-featurecards">
+                <div class="product-featurecard">
+                    <div class="borderbox rightborder">
+                        <p class="product--feature"><i class="ph ph-code"></i> 1,000 Calls / mo</p>
+                        <p class="product--feature"><i class="ph ph-users"></i> No Support</p>
+                        <p class="product--feature"><i class="ph ph-arrows-clockwise"></i> Real-Time Weather</p>
+                    </div>
+                </div>
+                <div class="product-featurecard">
+                    <div class="borderbox rightborder">
+                        <p class="product--feature"><i class="ph ph-code"></i> 50,000 Calls / mo</p>
+                        <p class="product--feature"><i class="ph ph-currency-circle-dollar"></i> + 0.00023976 each</p>
+                        <p class="product--feature"><i class="ph ph-users"></i> Standard Support</p>
+                        <p class="product--feature"><i class="ph ph-arrows-clockwise"></i> Real-Time Weather</p>
+                        <p class="product--feature"><i class="ph ph-map-pin"></i> Location Lookup</p>
+                        <p class="product--feature"><i class="ph ph-shield-check"></i> HTTPS Encryption</p>
+                        <p class="product--feature"><i class="ph ph-circle-half"></i> Astronomy Data</p>
+                        <p class="product--feature"><i class="ph ph-alarm"></i> Hour by Hour Data</p>
+                        <p class="product--feature"><i class="ph ph-clock-counter-clockwise"></i> Full Historical Data</p>
+                    </div>
+                </div>
+                <div class="product-featurecard">
+                    <div class="borderbox rightborder">
+                        <p class="product--feature"><i class="ph ph-code"></i> 300,000 Calls / mo</p>
+                        <p class="product--feature"><i class="ph ph-currency-circle-dollar"></i> + 0.000119996 each</p>
+                        <p class="product--feature"><i class="ph ph-users"></i> Standard Support</p>
+                        <p class="product--feature"><i class="ph ph-arrows-clockwise"></i> Real-Time Weather</p>
+                        <p class="product--feature"><i class="ph ph-map-pin"></i> Location Lookup</p>
+                        <p class="product--feature"><i class="ph ph-shield-check"></i> HTTPS Encryption</p>
+                        <p class="product--feature"><i class="ph ph-circle-half"></i> Astronomy Data</p>
+                        <p class="product--feature"><i class="ph ph-alarm"></i> Hour by Hour Data</p>
+                        <p class="product--feature"><i class="ph ph-clock-counter-clockwise"></i> Full Historical Data</p>
+                        <p class="product--feature"><i class="ph ph-sun"></i> 14-day Forecast Data</p>
+                        <p class="product--feature"><i class="ph ph-flag"></i> 40 Languages</p>
+                        <p class="product--feature"><i class="ph ph-square-half"></i> Bulk Queries</p>
+                    </div>
+                </div>
+                <div class="product-featurecard">
+                    <div class="borderbox">
+                        <p class="product--feature"><i class="ph ph-code"></i> 1,000,000 Calls / mo</p>
+                        <p class="product--feature"><i class="ph ph-currency-circle-dollar"></i> + 0.000119988 each</p>
+                        <p class="product--feature"><i class="ph ph-users"></i> Standard Support</p>
+                        <p class="product--feature"><i class="ph ph-arrows-clockwise"></i> Real-Time Weather</p>
+                        <p class="product--feature"><i class="ph ph-map-pin"></i> Location Lookup</p>
+                        <p class="product--feature"><i class="ph ph-shield-check"></i> HTTPS Encryption</p>
+                        <p class="product--feature"><i class="ph ph-circle-half"></i> Astronomy Data</p>
+                        <p class="product--feature"><i class="ph ph-alarm"></i> Hour by Hour Data</p>
+                        <p class="product--feature"><i class="ph ph-clock-counter-clockwise"></i> Full Historical Data</p>
+                        <p class="product--feature"><i class="ph ph-sun"></i> 14-day Forecast Data</p>
+                        <p class="product--feature"><i class="ph ph-flag"></i> 40 Languages</p>
+                        <p class="product--feature"><i class="ph ph-square-half"></i> Bulk Queries</p>
+                    </div>
+                </div>
+                <div class="product-featurecard darkbg">
+                    <div class="borderbox">
+                        <p class="product--feature"><i class="ph ph-code"></i> Volume Calls</p>
+                        <p class="product--feature"><i class="ph ph-arrows-clockwise"></i> Real-Time Weather</p>
+                        <p class="product--feature"><i class="ph ph-map-pin"></i> Location Lookup</p>
+                        <p class="product--feature"><i class="ph ph-shield-check"></i> HTTPS Encryption</p>
+                        <p class="product--feature"><i class="ph ph-circle-half"></i> Astronomy Data</p>
+                        <p class="product--feature"><i class="ph ph-alarm"></i> Hour by Hour Data</p>
+                        <p class="product--feature"><i class="ph ph-clock-counter-clockwise"></i> Full Historical Data</p>
+                        <p class="product--feature"><i class="ph ph-sun"></i> 14-day Forecast Data</p>
+                        <p class="product--feature"><i class="ph ph-flag"></i> 40 Languages</p>
+                        <p class="product--feature"><i class="ph ph-square-half"></i> Bulk Queries</p>
+                        <p class="product--feature"><i class="ph ph-gear"></i> Custom Solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="companies companies-light">
+        <div class="container">
+            <h5 class="customer">Trusted by the best:</h5>
+            <img class="company-logo" src="images/company_deloitte.png" />
+            <img class="company-logo" src="images/company_microsoft.png" />
+            <img class="company-logo" src="images/company_warnerbros.png" />
+            <img class="company-logo" src="images/company_wawa.png" />
+            <img class="company-logo" src="images/company_schneider.png" />
+            <img class="company-logo" src="images/company_ericsson.png" />
+        </div>
+    </section>
+
+    <section class="standards">
+        <div class="container">
+            <h4>Offering the Industry Standard for Weather Data</h4>
+            <img class="standard-map" src="images/standard-map.png" alt="">
+            <div class="standard-cards">
+                <div class="standard-card">
+                    <i class="ph ph-arrows-clockwise"></i>
+                    <div class="standard-desc">
+                        <h5>Real-Time Weather</h5>
+                        <p>Get instant access to current weather data for millions of global locations, powered by rock-solid data sources and refreshed in real-time.</p>
+                    </div>
+                    <div class="plan-included">
+                        <p class="included">Included in</p>
+                        <p>All Pricing Plans</p>
+                    </div>
+                </div>
+                <div class="standard-card">
+                    <i class="ph ph-map-pin"></i>
+                    <div class="standard-desc">
+                        <h5>Location Lookup & Autocomplete</h5>
+                        <p>Use our flexible search & autocomplete API endpoint to pin-point any city or region of your
+                            choice by name, ZIP code, coordinates or even IP.</p>
+                    </div>
+                    <div class="plan-included">
+                        <p class="included">Included in</p>
+                        <p>Standard Plan and higher</p>
+                    </div>
+                </div>
+                <div class="standard-card">
+                    <i class="ph ph-circle-half"></i>
+                    <div class="standard-desc">
+                        <h5>Astronomy & Lunar Data</h5>
+                        <p>Our API is capable of delivering a series of valuable astronomy data points, including sun and moon times, moon phase and moon illumination levels.</p>
+                    </div>
+                    <div class="plan-included">
+                        <p class="included">Included in</p>
+                        <p>Standard Plan and higher</p>
+                    </div>
+                </div>
+                <div class="standard-card">
+                    <i class="ph ph-alarm"></i>
+                    <div class="standard-desc">
+                        <h5>Hour-by-Hour Data</h5>
+                        <p>Get accurate real-time and historical weather data broken down to the hour — 24 hours including temperature, wind, humidity, rain and much more.</p>
+                    </div>
+                    <div class="plan-included">
+                        <p class="included">Included in</p>
+                        <p>Standard Plan and higher</p>
+                    </div>
+                </div>
+                <div class="standard-card">
+                    <i class="ph ph-clock-counter-clockwise"></i>
+                    <div class="standard-desc">
+                        <h5>Historical Weather Data</h5>
+                        <p>Depending on your subscription you can access full and detailed historical weather information globally all the way back to the year 2008.</p>
+                    </div>
+                    <div class="plan-included">
+                        <p class="included">Included in</p>
+                        <p>Standard Plan and higher</p>
+                    </div>
+                </div>
+                <div class="standard-card">
+                    <i class="ph ph-sun"></i>
+                    <div class="standard-desc">
+                        <h5>Weather Forecast Data</h5>
+                        <p>Make use of reliable weather forecast data for 7, 10 or 14 days into the future, updated in real-time and around the clock.</p>
+                    </div>
+                    <div class="plan-included">
+                        <p class="included">Included in</p>
+                        <p>Professional Plan and higher</p>
+                    </div>
+                </div>
+                <div class="standard-card">
+                    <i class="ph ph-flag"></i>
+                    <div class="standard-desc">
+                        <h5>Multi-Language API for 40 Languages</h5>
+                        <p>Request weather information in any of 40 available world languages, including English, Chinese, Arabic, French, Spanish and German.</p>
+                    </div>
+                    <div class="plan-included">
+                        <p class="included">Included in</p>
+                        <p>Professional Plan and higher</p>
+                    </div>
+                </div>
+                <div class="standard-card">
+                    <i class="ph ph-square-half"></i>
+                    <div class="standard-desc">
+                        <h5>Bulk API Queries</h5>
+                        <p>Look up weather real-time, historical or future information for multiple global locations in a single API request using the Bulk API feature.</p>
+                    </div>
+                    <div class="plan-included">
+                        <p class="included">Included in</p>
+                        <p>Professional Plan and higher</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h4>Frequently Asked Questions</h4>
+            <div class="faq-cards">
+                <div class="left">
+                    <div class="faq-card">
+                        <h5>Weather Data & API</h5>
+                        <div class="qa-box">
+                            <div class="plus-box">
+                                <p class="question">Where is the data coming from?</p>
+                                <i class="plus fa-solid fa-plus"></i>
+                                <i class="minus fa-solid fa-minus"></i>
+                            </div>
+                            <p class="answer">The weatherstack API is licensing weather data from some of the largest
+                                weather stations and weather data providers in the world, all of which are closely
+                                monitored
+                                for consistency and data accuracy around the clock.</p>
+                        </div>
+                        <div class="qa-box">
+                            <div class="plus-box">
+                                <p class="question">How often is weather data refreshed?</p>
+                                <i class="plus fa-solid fa-plus"></i>
+                                <i class="minus fa-solid fa-minus"></i>
+                            </div>
+                            <p class="answer">Weather data returned by the API as well as weather forecast data always
+                                contains the most up-to-date weather information at the current point in time, updated
+                                in real-time.</p>
+                        </div>
+                        <div class="qa-box">
+                            <div class="plus-box">
+                                <p class="question">How scalable is this service?</p>
+                                <i class="plus fa-solid fa-plus"></i>
+                                <i class="minus fa-solid fa-minus"></i>
+                            </div>
+                            <p class="answer">The weatherstack API is powered by apilayer cloud infrastructure, a system
+                                some of the world's most popular real-time API services are running on, making it highly
+                                scalable and flexible at any step of the way.</p>
+                        </div>
+                    </div>
+                    <div class="faq-card">
+                        <h5>Plans, Pricing & Payment</h5>
+                        <div class="qa-box">
+                            <div class="plus-box">
+                                <p class="question">What is the difference between free and paid subscriptions?</p>
+                                <i class="plus fa-solid fa-plus"></i>
+                                <i class="minus fa-solid fa-minus"></i>
+                            </div>
+                            <As class="answer">The weatherstack Free Plan is a way of getting familiar with the API, offering basic API functionality and a limitation of 1,000 monthly API lookups. As soon as you need a higher volume or advanced API features, you can choose from one of the premium subscriptions or contact us for a custom solution.</p>
+                        </div>
+                        <div class="qa-box">
+                            <div class="plus-box">
+                                <p class="question">Which subscription plan fits my needs?</p>
+                                <i class="plus fa-solid fa-plus"></i>
+                                <i class="minus fa-solid fa-minus"></i>
+                            </div>
+                            <p class="answer">The most decisive factor when it comes to your technical requirements is the number of monthly weather data requests you need to make per month. Other factors include HTTPS encryption, historical data, forecast data, and more.
+
+                                Signing up for the Free Plan is a great way of getting to know the API and implementing it without any commitments.</p>
+                        </div>
+                        <div class="qa-box">
+                            <div class="plus-box">
+                                <p class="question">Which payment methods are supported?</p>
+                                <i class="plus fa-solid fa-plus"></i>
+                                <i class="minus fa-solid fa-minus"></i>
+                            </div>
+                            <p class="answer">Payments can be made via credit card (Visa, MasterCard, Discover, Diner's Club, American Express). Enterprise and high-volume customers may request annual bank transfer payments to be enabled. You can change your payment method at any given time in the "Payment" section of your account dashboard.</p>
+                        </div>
+                        <div class="qa-box">
+                            <div class="plus-box">
+                                <p class="question">Can I also pay yearly?</p>
+                                <i class="plus fa-solid fa-plus"></i>
+                                <i class="minus fa-solid fa-minus"></i>
+                            </div>
+                            <p class="answer">Yes. If you choose annual billing, the total price of your subscription plan will be up to 20% lower than the total amount you would pay with a monthly payment frequency.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="faq-card">
+                        <h5>API Access & Features</h5>
+                        <div class="qa-box">
+                            <div class="plus-box">
+                                <p class="question">What is an API Request?</p>
+                                <i class="plus fa-solid fa-plus"></i>
+                                <i class="minus fa-solid fa-minus"></i>
+                            </div>
+                            <p class="answer">Pricing is based on the number of monthly API requests allowed. Each time the weatherstack API service is used to look up a weather information, one API request is consumed. API errors are not counted towards your monthly quota.</p>
+                        </div>
+                        <div class="qa-box">
+                            <div class="plus-box">
+                                <p class="question">What happens if I exceed my API Request volume?</p>
+                                <i class="plus fa-solid fa-plus"></i>
+                                <i class="minus fa-solid fa-minus"></i>
+                            </div>
+                            <p class="answer">Users will be automatically notified via email and in their account dashboard as soon as at least 75%, 90%, and 100% of their monthly API quota has been reached. After reaching 100% of the allowance, overages fees will apply so we make sure you won’t experience any disruptions and your website/application will keep running smoothly. You can learn more about overages billing here.</p>
+                        </div>
+                        <div class="qa-box">
+                            <div class="plus-box">
+                                <p class="question">What is the API's uptime?</p>
+                                <i class="plus fa-solid fa-plus"></i>
+                                <i class="minus fa-solid fa-minus"></i>
+                            </div>
+                            <p class="answer">Our API's system status is closely monitored around the clock. Every effort is made to ensure the highest possible level of availability and consistency, and we are proud to have an average uptime rate of nearly 100% (99.9%), calculated based on the past 12 months.
+
+                                There is a public API status page available at the following URL: status.weatherstack.com.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-link">
+                <a href="">Go to Frequently Asked Questions</a>
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-ending">
+        <div class="container">
+            <p>Ready now? Join companies like Microsoft, Warner Brothers or Deloitte today</p>
+            <i class="fa-solid fa-arrow-right"></i>
+            <button class="ending-btn">GET STANDARD PLAN</button>
+        </div>
+    </section>
+   
+    <footer>
+        <div class="container">
+            <div class="logosandlist">
+                <div class="logos">
+                    <a href="index.html">
+                        <h3 class="logo-text">weatherstack</h3>
+                    </a>
+                    <div class="socials">
+                        <img class="social-logo" src="images/icon-github.png" />
+                        <img class="social-logo" src="images/icon-facebook.png" />
+                        <img class="social-logo" src="images/icon-instagram.png" />
+                        <img class="social-logo" src="images/icon-youtube.png" />
+                        <img class="social-logo" src="images/icon-twitter.png" />
+                        <img class="social-logo" src="images/icon-linkedin.png" />
+                    </div>
+                </div>
+                <div class="footer-list">
+                    <div class="category">
+                        <p>Product</p>
+                        <p>Pricing</p>
+                        <p>List Your API</p>
+                        <p>Why choose us?</p>
+                        <p>Marketplace</p>
+                    </div>
+                    <div class="category">
+                        <p>DOCS & HELP</p>
+                        <p>Documentation</p>
+                        <p>Blog</p>
+                        <p>FAQS</p>
+                        <p>API Glossary</p>
+                    </div>
+                    <div class="category">
+                        <p>ACCOUNT</p>
+                        <p>Log In</p>
+                        <p>Forgot Password</p>
+                        <p>FREE Signup</p>
+                    </div>
+                    <div class="category">
+                        <p>GET IN TOUCH</p>
+                        <p>Contact</p>
+                        <p>Get a quote</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ending-link">
+                <a href="">Imprint / Legal</a> |
+                <a href="">Privacy</a> |
+                <a href="">Terms</a> |
+                <a href="">Cookie Preference</a> |
+                <a href="">Sitemap</a>
+            </div>
+            <p class="copyright">© 2022 Weatherstack API, an APILayer product. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

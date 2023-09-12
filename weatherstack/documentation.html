@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sass/documentation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Open+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <head>
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    </head>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="branding">
+                <a href="index.html">
+                    <h4 class="logo-text">weatherstack</h4>
+                </a>
+            </div>
+            <nav>
+                <a class="nav-item" href="pricing.html">
+                    <p>Pricing</p>
+                </a>
+                <a class="nav-item" href="documentation.html">
+                    <p>Documentation</p>
+                </a>
+                <a class="nav-item" href="">
+                    <p>FAQ</p>
+                </a>
+                <a class="nav-item" href="">
+                    <p>Blog</p>
+                </a>
+                <a class="nav-item" href="">
+                    <p id="status">Status</p>
+                </a>
+                <a class="nav-item" id="login" href="">
+                    <p>Log In</p>
+                </a>
+                <a class="nav-item" id="signup" href="">
+                    <p>SIGN UP FREE</p>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="guide">
+        <div class="container">
+            <div class="guide-card">
+                <h4>
+                    <i class="ph ph-rocket-launch"></i>
+                    3-Step Quickstart Guide
+                </h4>
+                <p>Feel like jumping right into making API calls? Get a free weatherstack account and simply use our
+                    3-Step Quickstart Guide.</p>
+                <button class="dark-btn">GET FREE ACCESS</button>
+            </div>
+            <div class="guide-card">
+                <h4>
+                    <i class="ph ph-file-code"></i>
+                    Code Examples
+                </h4>
+                <p>Our API supports all major programming languages. Click below to browse through examples in PHP,
+                    Python, Node, jQuery and Ruby.</p>
+                <button class="light-btn">CODE EXAMPLES</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="instruction">
+        <div class="container">
+            <div class="left">
+                <div class="left-title">
+                    <h5>Getting Started</h5>
+                    <a href="">API Authentication</a>
+                    <a href="">HTTPS Encryption</a>
+                    <a href="">API Error Codes</a>
+                </div>
+                <div class="left-title">
+                    <h5>API Features</h5>
+                    <a href="">Current Weather</a>
+                    <a href="">Historical Weather</a>
+                    <a href="">Historical Time-Series</a>
+                    <a href="">Weather Forecast</a>
+                    <a href="">Location Lookup</a>
+                </div>
+                <div class="left-title">
+                    <h5>Options</h5>
+                    <a href="">Query Parameter</a>
+                    <a href="">Unit Parameter</a>
+                    <a href="">Language Parameter</a>
+                    <a href="">JSONP Callbacks</a>
+                </div>
+                <div class="left-title">
+                    <h5>Code Examples</h5>
+                    <a href="">PHP</a>
+                    <a href="">Python</a>
+                    <a href="">Nodejs</a>
+                    <a href="">jQuery</a>
+                    <a href="">Go</a>
+                    <a href="">Ruby</a>
+                </div>
+                <div class="left-title">
+                    <h5>Billing Overages</h5>
+                    <a href="">Billing Overages</a>
+                </div>
+                <a class="github-link bold-text" href=""><span>weatherstack on GitHub</span></a>
+            </div>
+            <div class="right">
+                <h4 class="right-title">API Documentation</h4>
+                <div class="right-card">
+                    <p>Welcome to the weatherstack API documentation. Using the rights and
+                        interactive code examples below you will be able to start making API requests in a matter of
+                        minutes. If you have an account already and prefer to skip our detailed documentation, you can
+                        also jump to our <a href="">3-Step Quickstart Guide</a> right away.</p>
+                    <p>The weatherstack API was built to deliver accurate weather data for any
+                        application and use case, from real-time and historical weather information all the way to
+                        14-day weather forecasts, supporting all major programming languages. Our straightforward API
+                        design will make it easy to use the API — continue reading below to get started.</p>
+                </div>
+                <h4 class="right-title">Getting Started</h4>
+                <div class="right-card">
+                    <h5>API Authentication</h5>
+                    <p>The first step to using the API is to authenticate with your weatherstack
+                        account's unique API access key, which can be found in your account dashboard after
+                        registration. To authenticate with the API, simply use the base URL below and pass your API
+                        access key to the API's <span class="pink-bg red-text highlight">access_key</span> parameter.
+                    </p>
+                    <p class="bold-text">Example API Request:</p>
+                    <div class="example-desc">
+                        <p>https://api.weatherstack.com/current</p>
+                        <p class="gold-text">? access_key = YOUR_ACCESS_KEY</p>
+                        <p>& query = New York</p>
+                    </div>
+                    <p class="example-alert pink-bg"><span class="bold-text">Keep it safe: </span>Please make sure to
+                        keep your API access key and do not expose it in any publicly available part of your
+                        application. If you ever want to reset your key, simply head over to your <a href="">account
+                            dashboard</a> to do so.</p>
+                </div>
+                <div class="right-card">
+                    <h5>256-bit HTTPS Encryption</h5>
+                    <p>Clients using the Standard Plan or higher can connect to the weatherstack
+                        using industry-standard SSL (HTTPS) by attaching an <span
+                            class="pink-bg red-text highlight">s</span> to
+                        the HTTP protocol as shown in the example API request below.</p>
+                    <p class="bold-text">Example API Request:</p>
+                    <div class="example-desc">
+                        <p><span class="gold-text">https</span>://api.weatherstack.com/...</p>
+                    </div>
+                    <p>If you are currently on the Free Plan and would like to use the HTTPS API in production, please
+                        <a href="">upgrade your account</a> now. You can also learn more about available plans on our <a
+                            href="">Pricing Overview</a>.
+                    </p>
+                </div>
+                <div class="right-card">
+                    <h5>API Error Codes</h5>
+                    <p>Whenever an API request fails, the weatherstack API will return an error object in lightweight JSON format. Each error object contains an error code, an error type and an info object containing details about the error that occurred. Below you will find an example error as well as a list of common API errors.</p>
+                    <p class="bold-text">Example API Error:</p>
+                    <div class="example-desc">
+                        <p>{</p>
+                        <p><span class="gold-text">"success"</span>: <span class="green-text">false</span></p>
+                        <p><span class="gold-text">"error"</span>: {</p>
+                        <p><span class="gold-text">"code"</span>: <span class="green-text">104</span></p>
+                        <p><span class="gold-text">"type"</span>: <span class="gold-text">"usage_limit_reached"</span></p>
+                        <p><span class="gold-text">"info"</span>: <span class="gold-text">"Your monthly API request volume has been reached. Please upgrade your plan."</span></p>
+                        <p>}</p>
+                        <p>}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ending-signup">
+        <div class="container">
+            <p class="ending-desc">Any technical questions left? Reach out to us, our team is happy to help.</p>
+            <button class="ending-btn">CONTACT US</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="logosandlist">
+                <div class="logos">
+                    <a href="index.html">
+                        <h3 class="logo-text">weatherstack</h3>
+                    </a>
+                    <div class="socials">
+                        <img class="social-logo" src="images/icon-github.png" />
+                        <img class="social-logo" src="images/icon-facebook.png" />
+                        <img class="social-logo" src="images/icon-instagram.png" />
+                        <img class="social-logo" src="images/icon-youtube.png" />
+                        <img class="social-logo" src="images/icon-twitter.png" />
+                        <img class="social-logo" src="images/icon-linkedin.png" />
+                    </div>
+                </div>
+                <div class="footer-list">
+                    <div class="category">
+                        <p>Product</p>
+                        <p>Pricing</p>
+                        <p>List Your API</p>
+                        <p>Why choose us?</p>
+                        <p>Marketplace</p>
+                    </div>
+                    <div class="category">
+                        <p>DOCS & HELP</p>
+                        <p>Documentation</p>
+                        <p>Blog</p>
+                        <p>FAQS</p>
+                        <p>API Glossary</p>
+                    </div>
+                    <div class="category">
+                        <p>ACCOUNT</p>
+                        <p>Log In</p>
+                        <p>Forgot Password</p>
+                        <p>FREE Signup</p>
+                    </div>
+                    <div class="category">
+                        <p>GET IN TOUCH</p>
+                        <p>Contact</p>
+                        <p>Get a quote</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ending-link">
+                <a href="">Imprint / Legal</a> |
+                <a href="">Privacy</a> |
+                <a href="">Terms</a> |
+                <a href="">Cookie Preference</a> |
+                <a href="">Sitemap</a>
+            </div>
+            <p class="copyright">© 2022 Weatherstack API, an APILayer product. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

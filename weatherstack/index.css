@@ -1,0 +1,953 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8rem;
+}
+
+
+/* typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+/* general */
+
+button {
+    background-color: #f47b21;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-light {
+    background-color: white;
+    color: #14303f;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* layout */
+
+.container {
+    width: 1020px;
+    margin: 0 auto;
+}
+
+/* hero */
+.hero {
+    background-image: url('images/stacked-waves-haikei.png');
+    background-size: cover;
+}
+
+
+
+/* header */
+
+header {
+    height: 100px;
+    background-color: linear-gradient(135deg, #1f4e69 0, #164058 100%);
+    margin-bottom: 20px;
+}
+
+.branding {
+    height: 100px;
+    width: 300px;
+    float: left;
+}
+
+.branding>a>.logo-text {
+    line-height: 60px;
+}
+
+.logo-text {
+    display: inline-block;
+    color: white;
+}
+
+.logo-text::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url("images/weatherstack.png");
+    background-size: cover;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+nav {
+    float: right;
+}
+
+.nav-item {
+    margin: 15px 0 15px 15px;
+    line-height: 30px;
+    height: 30px;
+    padding: 0 8px;
+    display: inline-block;
+    font-size: 0.8rem;
+}
+
+#status::before {
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: rgb(91, 237, 86);
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+#login {
+    background-color: rgba(255, 255, 255, 0.192);
+    border-radius: 5px;
+}
+
+#signup {
+    background-color: #f47b21;
+    border-radius: 5px;
+}
+
+
+/* weather section */
+.weather {
+    height: 400px;
+    clear: both;
+
+}
+
+.marketing-msg {
+    width: 400px;
+    float: left;
+    word-wrap: normal;
+    color: white
+}
+
+.marketing-msg>p {
+    margin-top: 30px;
+    font-weight: 500;
+}
+
+.friendly {
+    font-family: 'Calligraffitti', cursive;
+    margin-left: 1rem;
+}
+
+.marketing-msg>button {
+    padding: 20px 40px;
+    margin-top: 20px;
+}
+
+.weather-dashboard {
+    border: 4px solid #608094;
+    background-color: #14303f;
+    border-radius: 10px;
+    color: white;
+    float: right;
+    text-align: center;
+}
+
+.weather-title {
+    margin-top: 20px;
+}
+
+.weather-week {
+    float: left;
+    margin-left: 20px;
+}
+
+.weather-week>img {
+    width: 100px;
+    height: 100px;
+}
+
+.weather-week>h5 {
+   margin-top: -20px;
+}
+
+.weather-dashboard > h3 {
+    float: left;
+    margin: 30px;
+    margin-left: 80px;
+}
+
+.weather-desc {
+    float: right;
+    margin: 30px;
+}
+
+.weather-summary {
+    clear: both;
+}
+
+.weather-daily {
+    float: left;
+    margin: 20px;
+}
+
+.weather-daily>img {
+    width: 50px;
+    height: 50px;
+}
+
+
+/* companies */
+
+.companies {
+    height: 130px;
+    padding: 50px;
+    background-color: #eff2f5;
+}
+
+.customer,
+.company-logo {
+    float: left;
+}
+
+.company-logo {
+    height: 30px;
+    margin-right: 45px;
+
+}
+
+.customer {
+    margin-right: 60px;
+    line-height: 30px;
+}
+
+
+/* features */
+
+.features {
+    margin-top: 50px;
+    height: 260px;
+    background-color: #eff2f5;
+    clear: both;
+    border-radius: 5px;
+}
+
+.feature {
+    width: 220px;
+    float: left;
+    margin: 30px 15px 30px 20px;
+    word-wrap: normal;
+}
+
+.feature>h5 {
+    margin: 15px 0;
+}
+
+.feature>i {
+    font-size: 2rem;
+}
+
+
+/* apis */
+
+.apis {
+    clear: both;
+    margin: 50px;
+    height: 300px;
+}
+
+.api-desc {
+    width: 400px;
+    float: left;
+}
+
+.api-img {
+    width: 550px;
+    height: 300px;
+    float: right;
+}
+
+.api-desc>h4 {
+    margin-bottom: 20px;
+}
+
+.api-list {
+    margin-top: 20px;
+}
+
+
+.api-item {
+    height: 30px;
+}
+
+.api-item>i {
+    font-size: 24px;
+    display: inline;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.api-item>p {
+    display: inline-block;
+    line-height: 30px;
+
+}
+
+
+
+
+
+/* example */
+
+.example {
+    text-align: center;
+    word-wrap: normal;
+    padding: 50px 0;
+    color: white;
+    background-image: url('images/layered-waves-haikei.png');
+    background-size: cover;
+}
+
+.example-code {
+    margin: 0 200px;
+}
+
+.example-code>h4 {
+    margin: 20px 0;
+}
+
+.example-code-title {
+    width: 100px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.069);
+    margin: 0 auto;
+}
+
+.example-code-desc {
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.example-button {
+    width: 33%;
+    padding: 20px;
+    float: left;
+}
+
+.example-button:first-of-type {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 1px solid rgb(219, 217, 217);
+}
+
+.example-button:nth-of-type(2) {
+    border-radius: 0;
+}
+
+.example-button:last-of-type {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 1px solid rgb(219, 217, 217);
+}
+
+.example-code>img {
+    width: 100%;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+
+/* property */
+
+.property {
+    height: 350px;
+}
+
+.property-item {
+    float: left;
+    margin: 10px;
+    padding: 20px;
+    width: 30%;
+    height: 160px;
+    text-align: left;
+    word-wrap: normal;
+    border-radius: 5px;
+    background-color: #4e5c6692;
+}
+
+.property-headline {
+    height: 30px;
+    margin-bottom: 16px;
+}
+
+.property-headline>i {
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+.property-title {
+    display: inline-block;
+    line-height: 30px;
+    margin-left: 5px;
+    font-size: 0.9rem;
+}
+
+
+
+
+/* testimonial */
+
+.testimonial {
+    margin-top: 50px;
+    height: 350px;
+    text-align: center;
+}
+
+.testimonial-desc {
+    margin: 30px auto;
+    font-size: 1rem;
+    width: 500px;
+}
+
+.testimonial-logo {
+    width: 18%;
+    height: 80px;
+    background-color: #eff2f5;
+    padding: 10px 15px;
+    float: left;
+    border-radius: 5px;
+    margin: 0 18px 15px 0;
+}
+
+.testimonial-logo > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
+/* ending-signup */
+
+.ending-signup {
+    margin-top: 30px;
+    padding: 25px;
+    height: 120px;
+    background-color: #eff2f5;
+}
+
+.ending-signup i {
+    font-size: 20px;
+    vertical-align: middle;
+    margin: 0 8px;
+}
+
+.ending-desc {
+    line-height: 70px;
+    display: inline-block;
+    margin-left: 200px;
+    font-weight: 600;
+}
+
+.ending-btn {
+    padding: 20px;
+    display: inline-block;
+}
+
+/* footer */
+
+footer {
+    padding: 50px 0;
+    background-color: #184157;
+    color: white;
+}
+
+.logosandlist {
+    height: 220px;
+}
+
+.logos {
+    float: left;
+    width: 300px;
+}
+
+.socials {
+    margin-top: 20px;
+}
+
+.social-logo {
+    float: left;
+    margin-left: 15px;
+    width: 25px;
+    height: 25px;
+}
+
+.footer-list {
+    float: right;
+}
+
+.category {
+    float: left;
+    margin-left: 70px;
+}
+
+.category>p:first-child {
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.category>p {
+    margin-bottom: 10px;
+}
+
+.ending-link {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.copyright {
+    text-align: center;
+}
+
+
+/* pricing page */
+.hero-pricing {
+    background-image: url('images/layered-waves-haikei2.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+
+
+
+/* billing */
+.billing {
+    color: white;
+    text-align: center;
+    padding: 30px 0 200px 0;
+}
+
+.billing-text {
+    margin: 30px 0;
+    font-size: 2rem;
+}
+
+.billing-type {
+    display: flex;
+    justify-content: center;
+}
+
+.monthly-box,
+.yearly-box {
+    width: 160px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.monthly-box {
+    background-color: white;
+    color: #184157;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.yearly-box {
+    background-color: #184157;
+    color: white;
+    position: relative;
+    border-bottom-right-radius: 5px;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 2px;
+}
+
+.monthly-box .checkbox {
+    border: 1px solid #184157;
+}
+
+.yearly-box .checkbox {
+    border: 1px solid white;
+}
+
+.monthly-box i {
+    display: none;
+}
+
+.monthly-box .checkbox:hover i {
+    display: block;
+}
+
+.discount {
+    position: absolute;
+    top: -10px;
+    right: -20px;
+    width: 100px;
+    height: 20px;
+    background-color: rgb(68, 206, 68);
+    border-radius: 4px;
+}
+
+.discount>p {
+    font-size: 0.8rem;
+    line-height: 20px;
+}
+
+
+/* products */
+
+.product-pricecards {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: -100px;
+}
+
+.product-pricecard {
+    width: 19%;
+    text-align: center;
+    padding: 30px 10px 10px 10px;
+    background-color: #ebeff4;
+    border-radius: 5px;
+}
+
+.product-type i {
+    font-size: 2rem;
+    vertical-align: middle;
+}
+
+.product-type {
+    margin-bottom: 30px;
+}
+
+.product-pricecard>p {
+    font-size: 0.8rem;
+}
+
+.product-price {
+    margin-bottom: 5px;
+}
+
+.product-price>strong {
+    font-size: 1.25rem;
+}
+
+.type-desc {
+    height: 50px;
+}
+
+.product-billing {
+    height: 15px;
+}
+
+.type-desc,
+.product-billing {
+    margin-bottom: 20px;
+}
+
+.product-signup {
+    display: inline-block;
+    width: 160px;
+    height: 40px;
+    padding: 10px 0;
+    border-radius: 5px;
+    background-color: #dde1e7;
+    color: #848484;
+    font-weight: 500;
+}
+
+
+.professional {
+    background-color: white;
+    color: #184157;
+    position: relative;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.popular-tag {
+    width: 100%;
+    height: 30px;
+    background-color: #184157;
+    color: white;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.popular-tag>p {
+    font-size: 0.8rem;
+    line-height: 30px;
+}
+
+.professional>.product-signup {
+    background-color: #184157;
+    color: white;
+}
+
+.enterprise {
+    background-color: #184157;
+    color: white;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.enterprise>.product-signup {
+    background-color: #f47b21;
+    color: white;
+}
+
+/* product-featurecard */
+
+.product-featurecards {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: -100px;
+    margin-bottom: -30px;
+}
+
+.product-featurecard {
+    padding: 20px 10px 0 10px;
+    width: 19%;
+}
+
+.borderbox {
+    height: 360px;
+}
+
+.product-featurecard>p {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.product--feature {
+    margin-bottom: 10px;
+}
+
+.product--feature i {
+    font-size: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+
+
+.darkbg {
+    background-color: #184157;
+    color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.rightborder {
+    border-right: 1px solid lightgrey;
+    margin-right: -17px;
+}
+
+/* numbers go up */
+.up {
+    font-size: 0.8rem;
+    vertical-align: top;
+    margin-left: 2px;
+    margin-right: 5px;
+}
+
+/* companies */
+.companies-light {
+    background-color: transparent;
+    margin-top: -70px;
+}
+
+/* standards */
+.standards {
+    background-color: #ebeff4;
+    padding: 50px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.standards h4 {
+    text-align: center;
+}
+
+.standard-map {
+    display: block;
+    width: 100%;
+    margin: 30px auto;
+}
+
+.standard-cards {
+    border-top: 2px dashed #dedee1;
+}
+
+.standard-card {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.standard-card i {
+    font-size: 4rem;
+    color: #949494;
+    margin-right: 1.5rem;
+}
+
+
+.standard-desc {
+    width: 650px;
+    height: 100px;
+    padding: 10px 120px 10px 0;
+    word-wrap: normal;
+    border-right: 2px dashed #dedee1;
+    margin-right: 40px;
+}
+
+.standard-desc>h5 {
+    margin-bottom: 1rem;
+}
+
+.included {
+    display: inline-block;
+    padding: 2px 10px;
+    background-color: #184157;
+    border-radius: 5px;
+    color: white;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+
+
+/* faq */
+.faq h4 {
+    text-align: center;
+    margin: 40px 0 60px 0;
+}
+
+.faq-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq-card {
+    width: 480px;
+    margin-bottom: 40px;
+}
+
+.faq-card>h5 {
+    color: #949494;
+    margin-bottom: 20px;
+}
+
+.qa-box {
+    border-bottom: 1px solid #dedee1;
+    margin-bottom: 10px;
+}
+
+.plus-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+
+.minus {
+    display: none !important; 
+}
+
+.plus-box:hover .plus {
+    display: none !important;
+}
+
+.plus-box:hover .minus {
+    display: inline-block !important;
+}
+
+.question {
+    display: inline-block;
+}
+
+.plus,
+.minus {
+    margin-right: 15px;
+    color: #949494;
+}
+
+.answer {
+    width: 100%;
+    background-color: #ebeff4;
+    padding: 20px 15px;
+    display: none;
+}
+
+/* use display to hide */
+.qa-box:hover .answer{
+    display: block;
+}
+
+.faq-link {
+    margin: 0 0 50px 10px;
+}
+
+.faq-link>a {
+    color: grey;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.faq-link>i{
+    color: #949494;
+}
+
+/* pricing-ending */
+.pricing-ending {
+    background-color: #ebeff4;
+    padding: 30px;
+}
+
+.pricing-ending>.container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing-ending p {
+    font-weight: 600;
+}

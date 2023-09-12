@@ -1,0 +1,405 @@
+/* variables */
+$darkblue: #184157;
+$white: white;
+$light-grey: #ebeff4;
+$small-text: 0.8rem;
+$pink: rgba(255, 192, 203, 0.2);
+$darkred: rgb(169, 3, 3);
+$bold: bold;
+$gold: gold;
+$orange: #f47b21;
+
+
+/* root */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8rem;
+}
+
+
+/* typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+.bold-text {
+    font-weight: $bold;
+}
+
+/* general */
+
+button {
+    background-color: $orange;
+    border: none;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+button,
+a {
+    color: $white;
+}
+
+.red-text {
+    color: $darkred;
+}
+
+.gold-text {
+    color: $gold;
+}
+
+.green-text {
+    color: #a0d468;
+}
+
+.pink-bg {
+    background-color: $pink;
+}
+
+@mixin float($side: left) {
+    float: $side;
+}
+
+@mixin inline-block {
+    display: inline-block;
+}
+
+@mixin icon-inline($width: 20px, $height: 20px, $bgimg: "../images/api1.png", $gap: 10px) {
+    content: "";
+    width: $width;
+    height: $height;
+    background-image: url($bgimg);
+    background-size: cover;
+    vertical-align: middle;
+    margin-right: $gap;
+    @include inline-block;
+}
+
+@mixin border-radius($value: 5px) {
+    border-radius: $value;
+}
+
+@mixin margin-bottom($value: 30px) {
+    margin-bottom: $value;
+}
+
+.logo-text {
+    @include inline-block;
+    line-height: 60px;
+
+    &::before {
+        @include icon-inline(30px, 30px, "../images/weatherstack.png");
+    }
+}
+
+/* layout */
+.container {
+    width: 1020px;
+    margin: 0 auto;
+}
+
+/* header */
+header {
+    background-color: $darkblue;
+    height: 70px;
+
+    .branding {
+        height: 70px;
+        width: 300px;
+        @include float;
+    }
+
+    nav {
+        @include float(right);
+
+        .nav-item {
+            @include float;
+            @include inline-block;
+            margin: 15px 0 15px 15px;
+            line-height: 30px;
+            height: 30px;
+            padding: 0 8px;
+            font-size: 0.8rem;
+
+            #status::before {
+                @include icon-inline(10px, 10px, "", 5px);
+                background-color: #5bed56;
+                border-radius: 50%;
+                vertical-align: baseline;
+            }
+        }
+
+        #login {
+            background-color: rgba(255, 255, 255, 0.192);
+        }
+
+        #signup {
+            background-color: $orange;
+        }
+
+        #login,
+        #signup {
+            @include border-radius;
+        }
+    }
+}
+
+
+/* guide */
+.guide {
+    background-color: $light-grey;
+    clear: both;
+
+    .container {
+        display: flex;
+        justify-content: flex-start;
+
+        .guide-card {
+            width: 40%;
+            margin-right: 100px;
+            padding: 30px 0;
+
+            p {
+                margin: 20px 0;
+                font-size: $small-text;
+            }
+
+            button {
+                padding: 10px 20px;
+                @include border-radius(3px);
+                cursor: pointer;
+            }
+
+            .dark-btn {
+                background-color: $darkblue;
+            }
+
+            .light-btn {
+                background-color: darken($light-grey, 10%);
+                color: darken($light-grey, 50%);
+            }
+        }
+    }
+}
+
+
+/* instruction */
+.instruction {
+    padding-top: 30px;
+
+    .container {
+        display: flex;
+
+        .left {
+            width: 22%;
+            height: 800px;
+            border-right: 1px solid $light-grey;
+
+            &-title {
+                @include margin-bottom(20px);
+        
+                h5 {
+                    margin: 10px 0 10px 15px;
+                    font-weight: 500;
+                }
+        
+                a {
+                    color: black;
+                    display: block;
+                    padding: 4px 0 4px 15px;
+                    font-size: $small-text;
+        
+                    &:hover {
+                        background-color: $light-grey;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .github-link {
+                color: black;
+                display: block;
+                padding: 8px 0 8px 15px;
+                background-color: $light-grey;
+        
+                span::before {
+                    @include icon-inline(20px, 20px, "../images/icon-github.png")
+                }
+            }
+        }
+
+        .right {
+            width: 78%;
+            padding-left: 30px;
+    
+            &-title {
+                @include margin-bottom(20px);
+            }
+    
+            &-card {
+                @include margin-bottom(50px);
+                
+                h5 {
+                    border-bottom: 1px solid $light-grey;
+                    padding-bottom: 10px;
+                    @include margin-bottom(10px);
+                }
+
+                p {
+                    line-height: 1.3;
+                    @include margin-bottom(15px);
+                    font-size: $small-text;
+
+                    a {
+                        color: $darkblue;
+                        text-decoration: underline;
+                    }
+
+                    .highlight {
+                        padding: 1px 3px;
+                        @include border-radius(2px);
+                    }
+                }
+
+                .example-desc {
+                    padding: 10px 15px;
+                    background-color: rgb(5, 5, 37);
+                    color: $white;
+                    @include border-radius;
+                    @include margin-bottom(20px);
+            
+                    p {
+                        margin: 0
+                    }
+            
+                    & p:nth-child(2),
+                    & p:nth-child(3),
+                    & p:nth-child(7) {
+                        margin-left: 30px;
+                    }
+
+                    & p:nth-child(4),
+                    & p:nth-child(5),
+                    & p:nth-child(6) {
+                        margin-left: 60px;
+                    }
+                }
+
+                .example-alert {
+                    text-align: left;
+                    padding: 10px 15px;
+                    border-left: 3px solid $darkred;
+                }
+            }
+        }
+    }
+}
+
+
+/* ending-signup */
+.ending {
+    &-signup {
+        margin-top: 30px;
+        padding: 15px;
+        height: 70px;
+        background-color: $light-grey;
+    }
+
+    &-desc {
+        line-height: 40px;
+        margin-left: 200px;
+        margin-right: 20px;
+    }
+
+    &-btn {
+        color: $white;
+        background-color: $darkblue;
+        padding: 10px;
+        @include border-radius;
+    }
+
+    &-desc,
+    &-btn {
+        @include inline-block;
+    }
+}
+
+/* footer */
+footer {
+    color: $white;
+    background-color: $darkblue;
+    padding: 50px 0;
+
+    .logosandlist {
+        height: 220px;
+
+        .logos {
+            width: 300px;
+            @include float;
+        }
+
+        .socials {
+            margin-top: 20px;
+
+            .social-logo {
+                margin-left: 15px;
+                width: 25px;
+                height: 25px;
+                @include float;
+            }
+        }
+    }
+
+    .footer-list {
+        @include float(right);
+
+        .category {
+            @include float;
+            margin-left: 70px;
+
+            p {
+                @include margin-bottom(10px);
+            }
+        }
+    }
+
+    .ending-link {
+        @include margin-bottom(10px);
+    }
+
+    .ending-link,
+    .copyright {
+        text-align: center;
+    }
+}
