@@ -42,6 +42,7 @@ button {
   background-color: #f47b21;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 a {
@@ -75,7 +76,6 @@ a {
 
 .logo-text {
   display: inline-block;
-  line-height: 60px;
 }
 
 .logo-text::before {
@@ -98,13 +98,17 @@ a {
 /* header */
 header {
   background-color: #184157;
-  height: 70px;
+  height: 60px;
 }
 
 header .branding {
-  height: 70px;
+  height: 60px;
   width: 300px;
   float: left;
+}
+
+header .branding .logo-text {
+  line-height: 60px;
 }
 
 header nav {
@@ -367,6 +371,12 @@ footer .footer-list .category {
 
 footer .footer-list .category p {
   margin-bottom: 10px;
+}
+
+footer .footer-list .category p:first-child {
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 footer .ending-link {
