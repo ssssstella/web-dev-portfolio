@@ -2,16 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config();
-}
-
-const APIKEY = process.env.APIKEY;
-const AUTHDOMAIN = process.env.AUTHDOMAIN;
-const PROJECTID = process.env.PROJECTID;
-const STORAGEBUCKET = process.env.STORAGEBUCKET;
-const MESSAGINGSENDERID = process.env.MESSAGINGSENDERID;
-const APPID = process.env.APPID;
+const APIKEY = process.env.REACT_APP_APIKEY;
+const AUTHDOMAIN = process.env.REACT_APP_AUTHDOMAIN;
+const PROJECTID = process.env.REACT_APP_PROJECTID;
+const STORAGEBUCKET = process.env.REACT_APP_STORAGEBUCKET;
+const MESSAGINGSENDERID = process.env.REACT_APP_MESSAGINGSENDERID;
+const APPID = process.env.REACT_APP_APPID;
 
 // Your web app's Firebase configuration
 const firebaseConfig = {

@@ -13,6 +13,7 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 function App() {
   const dataList = [];
   const [authUser, setAuthUser] = useState(null);
+  const [products, setProducts] = useState(null);
  
   useEffect(() => {
       const getData = async () => {
@@ -21,6 +22,7 @@ function App() {
           dataList.push({...doc.data(), isAdded: false})
         } )
         // console.log(dataList);
+        setProducts(dataList);
       }
       getData();
     }, []);
@@ -48,7 +50,7 @@ function App() {
       })
   }
   
-  const [products, setProducts] = useState(dataList);
+
   const [cartLocal, setCartLocal] = useState(false);
   const [showCart, setShowCart] = useState(false);
   const [filterLocal, setFilterLocal] = useState(false);
