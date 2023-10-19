@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useContext } from "react";
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -13,23 +13,35 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import {Link, useNavigate} from "react-router-dom";
 import "./sass/signup.css";
-
-
+import {auth} from "../../services/firebase.config";
+import { createUserWithEmailAndPassword, updateProfile} from "firebase/auth";
+import MainContext from '../context/Context';
 
 const defaultTheme = createTheme();
 
 export default function SignUp() {
+  const { userSignOut } = useContext(MainContext);
+    
   const navigate = useNavigate();
-  const jumpToMain = () => {
-    navigate(`/main`);
+  const jumpToSignIn = () => {
+    navigate(`/signin`);
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    const token = { firstName: data.get('firstName'), lastName: data.get('lastName'), email: data.get('email'), password: data.get('password') }
-    localStorage.setItem('token', JSON.stringify(token));
-    jumpToMain();
+    await createUserWithEmailAndPassword(auth, data.get('email'), data.get('password'))
+      .then( () => {
+        console.log("new user created successfully");
+        const user = auth.currentUser;
+        updateProfile(user, {
+          displayName: data.get('name')
+        })
+      }).catch((error) => {
+        console.log(error);
+      })
+    userSignOut();
+    jumpToSignIn();
   };
 
   return (
@@ -52,25 +64,15 @@ export default function SignUp() {
           </Typography>
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12}>
                 <TextField
-                  autoComplete="given-name"
-                  name="firstName"
+                  autoComplete="name"
+                  name="name"
                   required
                   fullWidth
-                  id="firstName"
-                  label="First Name"
+                  id="name"
+                  label="Name"
                   autoFocus
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  fullWidth
-                  id="lastName"
-                  label="Last Name"
-                  name="lastName"
-                  autoComplete="family-name"
                 />
               </Grid>
               <Grid item xs={12}>

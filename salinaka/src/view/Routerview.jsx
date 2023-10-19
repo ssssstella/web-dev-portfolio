@@ -12,6 +12,7 @@ import AccountCenter from '../component/account/AccountCenter';
 import MainContext from '../component/context/Context';
 
 export default function Routerview() {
+
     return (
         <div>
             <Routes>
@@ -31,8 +32,8 @@ export default function Routerview() {
 }
 
 function Auth({children}) {
-    const { setShowShopModal } = useContext(MainContext);
-    const isLogIn = localStorage.getItem('token');
+    const { setShowShopModal, authUser } = useContext(MainContext);
+    const isLogIn = authUser ? true : false;
     if (isLogIn) {
         return children
     } else {

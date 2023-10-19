@@ -12,9 +12,11 @@ import ShopModal from "../shopmodal/ShopModal";
 import store from "../store/store";
 
 
+
 export default function Header() {
 
     const navigate = useNavigate();
+
 
     // scroll to stick 
     useEffect(() => {
@@ -42,18 +44,20 @@ export default function Header() {
     const [searchContent, setSearchContent] = useState('Search product...');
     const handleSearchContent = (e) => {
         setSearchContent(e.target.value);
-        
+
     }
     const handleSearchSubmit = (e) => {
         // when return is pressed, submit search
         if (e.keyCode === 13) {
             // console.log(e.keyCode);
-            store.dispatch({type: 'search', value: searchContent});
+            store.dispatch({ type: 'search', value: searchContent });
         }
     }
 
 
-    const { showCart, setShowCart, cartLocal, showFilter, setShowFilter, showShopModal, setShowShopModal } = useContext(MainContext);
+    const { showCart, setShowCart, cartLocal, showFilter, setShowFilter, showShopModal, setShowShopModal, authUser, userSignOut } = useContext(MainContext);
+    // console.log(authUser);
+
     const openCart = () => {
         setShowCart(true);
     }
@@ -68,12 +72,12 @@ export default function Header() {
     const showFilterIcon = useLocation().pathname === '/shop' ? true : false;
 
     const openAccount = () => {
-        console.log('openaccount');
+        // console.log('openaccount');
         const headerUser = document.querySelector('.header--user');
         headerUser.style.opacity = 1;
     }
 
-    
+
     const jumptoAccount = () => {
         const headerUser = document.querySelector('.header--user');
         headerUser.style.opacity = 0;
@@ -83,7 +87,7 @@ export default function Header() {
     const signout = () => {
         const headerUser = document.querySelector('.header--user');
         headerUser.style.opacity = 0;
-        localStorage.removeItem('token');
+        userSignOut();
         navigate('/signin');
     }
 
@@ -101,16 +105,16 @@ export default function Header() {
                 <div className="header--shop">
                     {showFilterIcon ? <div className="header--shop--filter" onClick={() => setShowFilter(true)}><p>Filters</p><Funnel size={24} /></div> : ''}
                     {showFilter && <Filter />}
-                    {useLocation().pathname === '/shop' &&  <input type="search" 
-                           id="searchbar"
-                           value={searchContent}
-                           onChange={handleSearchContent}
-                           onKeyDown={handleSearchSubmit}/>}
+                    {useLocation().pathname === '/shop' && <input type="search"
+                        id="searchbar"
+                        value={searchContent}
+                        onChange={handleSearchContent}
+                        onKeyDown={handleSearchSubmit} />}
                     {totalCount ? <Badge badgeContent={totalCount} color="primary"><Bag className="header--shop--icon" size={24} onClick={openCart} /></Badge> : <ShoppingCartSimple className="header--shop--icon" size={24} onClick={openCart} />}
                 </div>
-                {localStorage.getItem('token') ?
+                {authUser ?
                     <div className="header--account" onClick={openAccount}>
-                        <p>{JSON.parse(localStorage.getItem('token')).firstName}</p>
+                        <p>{authUser.displayName}</p>
                         <UserCircle size={30} />
                     </div>
                     : <div className="header--regis">
@@ -118,16 +122,19 @@ export default function Header() {
                         <Link className="link" to="/signin"><button className="btn-light">Sign In</button></Link>
                     </div>
                 }
-                <div className="header--user">
-                    <div onClick={jumptoAccount}>
-                        <p>View Account</p>
-                        <User size={24} />
+                {authUser ?
+                    <div className="header--user">
+                        <div onClick={jumptoAccount}>
+                            <p>View Account</p>
+                            <User size={24} />
+                        </div>
+                        <div onClick={signout}>
+                            <p>Sign Out</p>
+                            <ArrowCircleRight size={24} />
+                        </div>
                     </div>
-                    <div onClick={signout}>
-                        <p>Sign Out</p>
-                        <ArrowCircleRight size={24} />
-                    </div>
-                </div>
+                    : ''
+                }
             </div>
             {showCart && <Cart />}
         </div>

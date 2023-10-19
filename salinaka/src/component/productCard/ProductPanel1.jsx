@@ -1,12 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import ProductCard1 from './ProductCard1';
 import "./sass/productcard.css";
-import data from "../../data";
 import {Link} from "react-router-dom";
+import MainContext from '../context/Context';
 
 export default function ProductPanel1({title, link, idx}) {
- 
-    const selected = idx.map(value => data[value]);
+    const { products } = useContext(MainContext);
+    const selected = idx.map(value => products[value]);
     const selectedCards = selected.map(item => {
         return <ProductCard1 
                     key={item.id}

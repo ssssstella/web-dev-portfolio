@@ -13,6 +13,8 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link, useNavigate } from "react-router-dom";
 import "./sass/signin.css";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import {auth} from "../../services/firebase.config";
 
 const defaultTheme = createTheme();
 
@@ -26,9 +28,13 @@ export default function SignIn() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    // compare token with backend in the future
-    const token = { email: data.get('email'), password: data.get('password') }
-    localStorage.setItem('token', JSON.stringify(token));
+
+    signInWithEmailAndPassword(auth, data.get('email'), data.get('password'))
+      .then((userCredential) => {
+        console.log(userCredential);
+      }).catch((error) => {
+        console.log(error);
+      });
     jumpToMain();
   };
 
