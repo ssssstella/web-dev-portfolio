@@ -25,6 +25,7 @@ function App() {
         setProducts(dataList);
       }
       getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
   useEffect(() => {
@@ -35,7 +36,6 @@ function App() {
         setAuthUser(null);
       }
     })
-
     return () => {
       listen();
     }

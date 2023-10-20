@@ -36,7 +36,7 @@ export default function Shop() {
         setSelected(searchResult);
         setSearchContent(searchStr);
       })
-  }, [store])
+  }, [products])
 
 
   // initialize price range values and filter values
@@ -73,6 +73,7 @@ export default function Shop() {
       tFlag[2] = filter.priceRange[0] === 56 && filter.priceRange[1] === 674 ? false : true;
       setFilterResultFlag(tFlag);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filterLocal])
 
 

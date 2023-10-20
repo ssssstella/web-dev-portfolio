@@ -16,7 +16,7 @@ export default function ProductCard2({id}) {
 
     useEffect(()=>{
         setItem(products.filter(product => product.id === Number(id))[0])
-    }, [products])
+    }, [products, id])
    
     const updateItem = () => {
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
