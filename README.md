@@ -20,12 +20,8 @@
 
 
 ## React projects:
-1. [salinaka](https://github.com/ssssstella/web-dev-portfolio/tree/main/salinaka), go to [Demo](https://salinaka.vercel.app/main)
 2. [quizzical](https://github.com/ssssstella/web-dev-portfolio/tree/main/quizzical), go to [Demo](https://stirring-pegasus-d217f7.netlify.app)
 3. [travel journal](https://github.com/ssssstella/web-dev-portfolio/tree/main/travel-journal), go to [Demo](https://superlative-basbousa-d89b23.netlify.app)
 
 
-## Node projects: 
-1. [sneat](https://github.com/ssssstella/sneat), go to [Demo](https://sneat-three.vercel.app/login)
-2. [salinaka](https://github.com/ssssstella/web-dev-portfolio/tree/main/salinaka), go to [Demo](https://salinaka.vercel.app/main)
   
